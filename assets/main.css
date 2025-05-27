@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: #ff0000;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+  border: 3px solid #ff0000;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+}
+
+button:hover {
+  background-color: hsl(0, 100%, 75%);
+  border: 3px solid hsl(0, 100%, 75%);
+}
+
+button:active {
+  background-color: hsl(0, 100%, 75%);
+  border: 3px solid #fda29b;
+}
+
+button.black {
+  background: #000;
+  border: 3px solid #000;
+}
+button.black:hover {
+  background-color: #403f3f;
+  border: 3px solid #403f3f;
+}
+button.black:active {
+  background-color: #403f3f;
+  border: 3px solid #696770;
+}
+
+h1,
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+article {
+  margin-bottom: 120px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+p {
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+.g {
+  color: #696770;
+}
+
+/* Inter Regular */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/web/Inter-Regular.woff2") format("woff2");
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Bold */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/web/Inter-Bold.woff2") format("woff2");
+
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Применение шрифта */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+/* Контейнер для кнопки отправки */
+.submit-container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Кнопка отправки */
+.submit-button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 28px;
+  border: solid 3px #000;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+}
+.submit-button:hover {
+  background-color: #474a4d;
+  border-color: #474a4d;
+}
+.submit-button:active {
+  background-color: #474a4d;
+  border-color: #696770;
+}
+.submit-button.disabled {
+  background-color: #97969b;
+  border-color: #97969b;
+  pointer-events: none;
+}
+
+/*кнопка заказать*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.buy {
+  width: 120px;
+  height: 54px;
+  margin-bottom: 30px;
+}
+
+/*кнопка заказать*/
+.button-order {
+  display: flex;
+  justify-content: center;
+}
+
+.order {
+  width: 120px;
+  height: 54px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*кнопка подробнее об установке*/
+.more-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 268px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-color: black;
+  font-weight: 540;
+  font-size: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.more-container a {
+  text-decoration: none;
+}
+.more:hover {
+  background-color: #474a4d;
+  border-color: #474a4d;
+}
+.more:active {
+  background-color: #474a4d;
+  border-color: #696770;
+  color: white;
+}
+.close {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  float: right;
+  background-image: url("@/assets/images/black_logos/close.svg");
+  background-size: contain;
+}
+.close:hover {
+  background-image: url("@/assets/images/black_logos/close_hover.svg");
+}
+.close:active {
+  background-image: url("@/assets/images/black_logos/close_active.svg");
+}
+@media (max-width: 1024px) {
+  article {
+    margin-bottom: 40px;
+  }
+
+  .page-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .more-container {
+    margin-bottom: 20px;
+  }
+
+  .more {
+    max-width: 180px;
+    max-height: 40px;
+    font-size: 12px;
+  }
+
+  .close {
+    width: 24px;
+    height: 24px;
+  }
+}
