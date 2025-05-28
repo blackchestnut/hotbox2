@@ -30,7 +30,7 @@ const emailData = () => {
       <div class="leadform-content">
         <!-- Логотип огня для ПК версии -->
         <img
-          src="\assets\images\red_logos\fire.svg"
+          src="\images\red_logos\fire.svg"
           alt="Fire Logo"
           class="fire-logo fire-logo-desktop"
         />
@@ -67,7 +67,7 @@ const emailData = () => {
 
         <!-- Логотип огня для мобильной версии -->
         <img
-          src="\assets\images\red_logos\fire.svg"
+          src="\images\red_logos\fire.svg"
           alt="Fire Logo"
           class="fire-logo fire-logo-mobile"
         />

@@ -1,62 +1,50 @@
 <template>
   <div class="pictures">
     <img
-      src="\assets\images\partners\Bosch-logosvg.svg"
+      src="\images\partners\Bosch-logosvg.svg"
       alt="Bosch Logo"
       class="bosch-logo"
     />
     <img
-      src="\assets\images\partners\caldera-logo.png"
+      src="\images\partners\caldera-logo.png"
       alt="caldera Logo"
       class="caldera-logo"
     />
     <img
-      src="\assets\images\partners\Weishaupt-Logo.png"
+      src="\images\partners\Weishaupt-Logo.png"
       alt="Weishaupt Logo"
       class="weishaupt-logo"
     />
     <img
-      src="\assets\images\partners\Legrand-logo.png"
+      src="\images\partners\Legrand-logo.png"
       alt="Legrand Logo"
       class="legrand-logo"
     />
     <img
-      src="\assets\images\partners\Schneider-Electric-l.png"
+      src="\images\partners\Schneider-Electric-l.png"
       alt="Schneider-Electric-l Logo"
       class="she-logo"
     />
     <img
-      src="\assets\images\partners\Temron-logo.png"
+      src="\images\partners\Temron-logo.png"
       alt="Temron Logo"
       class="temron-logo"
     />
+    <img src="\images\partners\Group.png" alt="Group Logo" class="group-logo" />
     <img
-      src="\assets\images\partners\Group.png"
-      alt="Group Logo"
-      class="group-logo"
-    />
-    <img
-      src="\assets\images\partners\Siemens-logo.png"
+      src="\images\partners\Siemens-logo.png"
       alt="Siemens Logo"
       class="siemens-logo"
     />
+    <img src="\images\partners\CNP-logo.png" alt="CNP Logo" class="cnp-logo" />
+    <img src="\images\partners\ABB-logo.png" alt="ABB Logo" class="abb-logo" />
     <img
-      src="\assets\images\partners\CNP-logo.png"
-      alt="CNP Logo"
-      class="cnp-logo"
-    />
-    <img
-      src="\assets\images\partners\ABB-logo.png"
-      alt="ABB Logo"
-      class="abb-logo"
-    />
-    <img
-      src="\assets\images\partners\Vector.png"
+      src="\images\partners\Vector.png"
       alt="Vector Logo"
       class="vector-logo"
     />
     <img
-      src="\assets\images\partners\Baltur-logo.png"
+      src="\images\partners\Baltur-logo.png"
       alt="Baltur Logo"
       class="baltur-logo"
     />

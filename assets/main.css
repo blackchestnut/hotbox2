@@ -83,7 +83,7 @@ p {
 /* Inter Regular */
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/web/Inter-Regular.woff2") format("woff2");
+  src: url("assets/fonts/web/Inter-Regular.woff2") format("woff2");
 
   font-weight: 400;
   font-style: normal;
@@ -93,7 +93,7 @@ p {
 /* Inter Bold */
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/web/Inter-Bold.woff2") format("woff2");
+  src: url("assets/fonts/web/Inter-Bold.woff2") format("woff2");
 
   font-weight: 600;
   font-style: normal;
@@ -202,14 +202,14 @@ body {
   height: 32px;
   cursor: pointer;
   float: right;
-  background-image: url("@/assets/images/black_logos/close.svg");
+  background-image: url("/images/black_logos/close.svg");
   background-size: contain;
 }
 .close:hover {
-  background-image: url("@/assets/images/black_logos/close_hover.svg");
+  background-image: url("/images/black_logos/close_hover.svg");
 }
 .close:active {
-  background-image: url("@/assets/images/black_logos/close_active.svg");
+  background-image: url("/images/black_logos/close_active.svg");
 }
 @media (max-width: 1024px) {
   article {

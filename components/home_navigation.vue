@@ -11,36 +11,36 @@
         с полным удаленным управлением
       </h2>
       <img
-        src="\assets\images\red_logos\award.svg"
+        src="\images\red_logos\award.svg"
         alt="Работаем по всей России"
         class="award-logo"
       />
       <div class="button-container">
-        <router-link to="/boiler-room" class="transparent-button boilers">
+        <NuxtLink to="/boiler-room" class="transparent-button boilers">
           <span class="d-desktop">Котельные<br />блочно-модульные</span>
           <span class="d-mobile">Котельные</span>
-        </router-link>
+        </NuxtLink>
 
-        <router-link to="/service" class="transparent-button service">
+        <NuxtLink to="/service" class="transparent-button service">
           Аренда
-        </router-link>
+        </NuxtLink>
 
-        <router-link to="/service" class="transparent-button repaire">
+        <NuxtLink to="/service" class="transparent-button repaire">
           Ремонт и обслуживание
-        </router-link>
+        </NuxtLink>
 
-        <router-link to="/car" class="transparent-button car">
+        <NuxtLink to="/boiler_ford_transit" class="transparent-button car">
           Котельные мобильные<br />
           автоматизированные
-        </router-link>
+        </NuxtLink>
 
-        <router-link to="/service" class="transparent-button production">
+        <NuxtLink to="/service" class="transparent-button production">
           Производство
-        </router-link>
+        </NuxtLink>
 
-        <router-link to="/news" class="transparent-button news">
+        <NuxtLink to="/news" class="transparent-button news">
           Новости
-        </router-link>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
 }
 
 .factory-wrapper {
-  background-image: url("/assets/images/big_images_of_boilers/shadow-box.png");
+  background-image: url("/images/big_images_of_boilers/shadow-box.png");
   background-size: cover;
   color: #fff;
   padding: 100px 0;
@@ -104,22 +104,22 @@ h2 {
 }
 
 .transparent-button.boilers {
-  background-image: url("@/assets/images/white_logos/factory-logo.svg");
+  background-image: url("/images/white_logos/factory-logo.svg");
 }
 .transparent-button.service {
-  background-image: url("@/assets/images/white_logos/clock-logo.svg");
+  background-image: url("/images/white_logos/clock-logo.svg");
 }
 .transparent-button.repaire {
-  background-image: url("@/assets/images/white_logos/hammer-logo.svg");
+  background-image: url("/images/white_logos/hammer-logo.svg");
 }
 .transparent-button.car {
-  background-image: url("@/assets/images/white_logos/car-logo.svg");
+  background-image: url("/images/white_logos/car-logo.svg");
 }
 .transparent-button.production {
-  background-image: url("@/assets/images/white_logos/hook-logo.svg");
+  background-image: url("/images/white_logos/hook-logo.svg");
 }
 .transparent-button.news {
-  background-image: url("@/assets/images/white_logos/news-logo.svg");
+  background-image: url("/images/white_logos/news-logo.svg");
 }
 
 /* Эффект при наведении на кнопку */
@@ -179,7 +179,7 @@ h2 {
   }
 
   .factory-wrapper {
-    background-image: url("/assets/images/big_images_of_boilers/shadow-box-mobile.png");
+    background-image: url("/images/big_images_of_boilers/shadow-box-mobile.png");
     padding-top: 50px;
     padding-bottom: 50px;
   }

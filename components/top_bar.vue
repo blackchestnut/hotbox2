@@ -273,7 +273,7 @@ function callManager() {
 .logo {
   width: 180px;
   height: 53px;
-  background-image: url("@/assets/images/red_logos/hotbox.png");
+  background-image: url("/images/red_logos/hotbox.png");
   background-size: cover;
 }
 
@@ -303,14 +303,14 @@ function callManager() {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  background-image: url("@/assets/images/black_logos/close.svg");
+  background-image: url("/images/black_logos/close.svg");
   background-size: contain;
 }
 .close:hover {
-  background-image: url("@/assets/images/black_logos/close_hover.svg");
+  background-image: url("/images/black_logos/close_hover.svg");
 }
 .close:active {
-  background-image: url("@/assets/images/black_logos/close_active.svg");
+  background-image: url("/images/black_logos/close_active.svg");
 }
 .modal-header {
   display: flex;
@@ -416,7 +416,7 @@ function callManager() {
 
   .icon-mobile-headphones {
     display: block;
-    background-image: url("@/assets/images/red_logos/call.svg");
+    background-image: url("/images/red_logos/call.svg");
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -427,7 +427,7 @@ function callManager() {
 
   .icon-mobile-menu {
     display: block;
-    background-image: url("@/assets/images/white_logos/menu.svg");
+    background-image: url("/images/white_logos/menu.svg");
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
@@ -472,7 +472,7 @@ function callManager() {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    background-image: url("@/assets/images/black_logos/close.svg");
+    background-image: url("/images/black_logos/close.svg");
     background-size: contain;
   }
 
@@ -542,23 +542,23 @@ function callManager() {
   }
 
   .call-ingener {
-    background-image: url("@/assets/images/black_logos/call-ingener.svg");
+    background-image: url("/images/black_logos/call-ingener.svg");
   }
 
   .call-manager {
-    background-image: url("@/assets/images/black_logos/call-manager.svg");
+    background-image: url("/images/black_logos/call-manager.svg");
   }
 
   .email {
-    background-image: url("@/assets/images/black_logos/email.svg");
+    background-image: url("/images/black_logos/email.svg");
   }
 
   .telegram {
-    background-image: url("@/assets/images/black_logos/telegram.svg");
+    background-image: url("/images/black_logos/telegram.svg");
   }
 
   .whatsapp {
-    background-image: url("@/assets/images/black_logos/whatsapp.svg");
+    background-image: url("/images/black_logos/whatsapp.svg");
   }
 
   .call-ingener,
