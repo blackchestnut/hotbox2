@@ -7,7 +7,7 @@ export const SUPPORT_PHONE_TEL = "tel:+79779533911";
 
 export const links = [
   { text: "ГЛАВНАЯ", path: "/home" },
-  { text: "КОТЕЛЬНЫЕ", path: "/boiler-room", extraMatchPath: "kotelnye" },
+  { text: "КОТЕЛЬНЫЕ", path: "/product_room", extraMatchPath: "kotelnye" },
   { text: "УСЛУГИ", path: "/service" },
   { text: "МОБИЛЬНЫЕ КОТЕЛЬНЫЕ", path: "/boiler_ford_transit" },
   { text: "НОВОСТИ", path: "/news" },
