@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import partners_logo from "@/pages/partners_logo.vue";
-</script>
-
 <template>
   <article class="partner-wrapper page-container">
     <div class="partners">
