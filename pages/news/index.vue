@@ -4,7 +4,7 @@ import Menu from "/components/Menu.vue";
 <template>
   <Menu />
   <div class="page-container">
-    <RouterLink to="/boiler-room">
+    <RouterLink to="/products">
       <div class="back">
         <div class="back-logo"></div>
       </div>
@@ -28,7 +28,7 @@ import Menu from "/components/Menu.vue";
         📞Звоните или пишите нам прямо сейчас, чтобы узнать больше!<br />
       </div>
 
-      <router-link to="/boiler-room">
+      <router-link to="/products">
         <div class="more-container">
           <a class="more">Подробнее об установке</a>
         </div>
@@ -69,7 +69,7 @@ import Menu from "/components/Menu.vue";
         будущее.<br />
       </div>
 
-      <router-link to="/boiler-room">
+      <router-link to="/products">
         <div class="more-container">
           <a class="more">Подробнее об установке</a>
         </div>
@@ -102,7 +102,7 @@ import Menu from "/components/Menu.vue";
       </div>
     </div>
 
-    <router-link to="/boiler-room">
+    <router-link to="/products">
       <div class="more-container">
         <a class="more">Подробнее об установке</a>
       </div>

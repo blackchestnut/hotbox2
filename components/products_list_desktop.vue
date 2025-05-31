@@ -1,11 +1,10 @@
 <template>
   <div class="items">
     <NuxtLink
-      to="/product"
       v-for="(item, index) in products"
       :key="index"
       class="item"
-      :to="{ name: 'boiler', params: { id: item.path } }"
+      :to="{ name: 'products-id', params: { id: item.path } }"
     >
       <div class="item-content">
         <img :src="item.imgSrc" class="item-img" :alt="item.type" />

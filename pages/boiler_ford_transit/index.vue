@@ -3,7 +3,7 @@ import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
 import { ref, computed } from "vue";
 import Menu from "/components/Menu.vue";
 import { car } from "/utils/data";
-import order_boiler_ford_transit from "/pages/order_boiler_ford_transit.vue";
+import order_boiler_ford_transit from "/components/order_boiler_ford_transit.vue";
 const currentImageIndex = ref(0);
 const selectedCar = ref("");
 const selectedImage = ref("");

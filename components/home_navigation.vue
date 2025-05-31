@@ -16,7 +16,7 @@
         class="award-logo"
       />
       <div class="button-container">
-        <NuxtLink to="/product_room" class="transparent-button boilers">
+        <NuxtLink to="/products" class="transparent-button boilers">
           <span class="d-desktop">Котельные<br />блочно-модульные</span>
           <span class="d-mobile">Котельные</span>
         </NuxtLink>
@@ -29,7 +29,10 @@
           Ремонт и обслуживание
         </NuxtLink>
 
-        <NuxtLink to="/boiler_ford_transit" class="transparent-button car">
+        <NuxtLink
+          to="/boiler_ford_transit"
+          class="transparent-button boiler_ford_transit"
+        >
           Котельные мобильные<br />
           автоматизированные
         </NuxtLink>
@@ -112,7 +115,7 @@ h2 {
 .transparent-button.repaire {
   background-image: url("/images/white_logos/hammer-logo.svg");
 }
-.transparent-button.car {
+.transparent-button.boiler_ford_transit {
   background-image: url("/images/white_logos/car-logo.svg");
 }
 .transparent-button.production {
@@ -232,7 +235,7 @@ h2 {
   .button-container > .repaire {
     grid-area: c;
   } /* Ремонт и обслуживание */
-  .button-container > .car {
+  .button-container > .boiler_ford_transit {
     grid-area: d;
   } /* Мобильная котельная (смещена вправо) */
   .button-container > .production {

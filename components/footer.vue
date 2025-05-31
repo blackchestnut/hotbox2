@@ -20,7 +20,7 @@ import {
               <router-link to="/service">Ремонт и обслуживание</router-link>
             </li>
             <li>
-              <router-link to="/car"
+              <router-link to="/boiler_ford_transit"
                 >Мобильная котельная на базе Ford Transit</router-link
               >
             </li>

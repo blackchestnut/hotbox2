@@ -191,7 +191,7 @@ const showDetails = (index) => {
               <img src="\images\arrows\Vector1.svg" />
             </button>
           </div>
-          <router-link to="/boiler-room">
+          <router-link to="/products">
             <button class="full-catalog">ПОЛНЫЙ КАТАЛОГ</button>
           </router-link>
         </div>

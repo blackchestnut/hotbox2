@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import Menu from "/components/Menu.vue";
-import { SUPPORT_EMAIL_MAILTO } from "/helpers/constants";
+import { SUPPORT_EMAIL_MAILTO } from "/utils/constants";
 
 const isOrderModalVisible = ref(false);
 const selectedOrder = ref(null);

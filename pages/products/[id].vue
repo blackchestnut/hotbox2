@@ -3,7 +3,7 @@ import { ref, computed } from "vue";
 
 import Menu from "/components/Menu.vue";
 import { boilers } from "/utils/data";
-import BoilerOrder from "/pages/order_product.vue";
+import BoilerOrder from "/components/order_product.vue";
 import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants.js";
 
 const route = useRoute();
@@ -83,7 +83,7 @@ const emailData = () => {
 <template>
   <Menu />
   <div class="page-container">
-    <RouterLink to="/boiler-room">
+    <RouterLink to="/products">
       <div class="back">
         <div class="back-logo"></div>
       </div>

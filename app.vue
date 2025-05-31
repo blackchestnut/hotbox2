@@ -5,6 +5,6 @@ import TopBarComponent from "/components/top_bar.vue";
 
 <template>
   <TopBarComponent />
-  <RouterView />
+  <NuxtPage />
   <FooterComponent />
 </template>
