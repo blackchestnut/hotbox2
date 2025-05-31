@@ -1,5 +1,5 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO } from "@/helpers/constants";
+import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
 import { ref, computed } from "vue";
 
 const formMessage = ref("");

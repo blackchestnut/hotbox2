@@ -16,7 +16,7 @@
         class="award-logo"
       />
       <div class="button-container">
-        <NuxtLink to="/boiler-room" class="transparent-button boilers">
+        <NuxtLink to="/product_room" class="transparent-button boilers">
           <span class="d-desktop">Котельные<br />блочно-модульные</span>
           <span class="d-mobile">Котельные</span>
         </NuxtLink>

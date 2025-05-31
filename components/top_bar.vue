@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { SUPPORT_EMAIL, SUPPORT_EMAIL_MAILTO } from "@/helpers/constants";
+import { SUPPORT_EMAIL, SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-import { links } from "@/helpers/constants";
+import { links } from "~/utils/constants";
 
 const activeLink = computed(() => {
   const index = links.findIndex(

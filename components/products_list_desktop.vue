@@ -1,6 +1,7 @@
 <template>
   <div class="items">
-    <router-link
+    <NuxtLink
+      to="/product"
       v-for="(item, index) in products"
       :key="index"
       class="item"
@@ -22,7 +23,7 @@
           </div>
         </div>
       </div>
-    </router-link>
+    </NuxtLink>
   </div>
 </template>
 

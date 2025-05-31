@@ -1,20 +1,19 @@
 <script setup>
 import { ref, computed } from "vue";
 
-import { useRoute } from "vue-router";
-const route = useRoute();
 import Menu from "/components/Menu.vue";
-import { boilers } from "@/data";
-import BoilerOrder from "@/views/order_product.vue";
-import { SUPPORT_EMAIL_MAILTO } from "@/helpers/constants.js";
+import { boilers } from "/utils/data";
+import BoilerOrder from "/pages/order_product.vue";
+import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants.js";
 
+const route = useRoute();
 const currentImageIndex = ref(0);
 const isOrderModalVisible = ref(false);
 const selectedFuel = ref("Газ");
 const selectedGVS = ref("С подключением");
 const isExpanded = ref(false);
-const selectedBoiler = ref(""); // Название выбранного котла
-const selectedImage = ref(""); // Изображение выбранного котла
+const selectedBoiler = ref("");
+const selectedImage = ref("");
 const boiler = boilers.find((v) => v.path === route.params.id);
 const images = boiler.images;
 
@@ -445,7 +444,7 @@ const emailData = () => {
 }
 
 .back-logo {
-  background-image: url("@/assets/images/back_arrow/back2.svg");
+  background-image: url("/images/back_arrow/back2.svg");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -457,7 +456,7 @@ const emailData = () => {
 }
 
 .back-logo:hover {
-  background-image: url("@/assets/images/back_arrow/back3.svg");
+  background-image: url("/images/back_arrow/back3.svg");
 }
 
 .back:active {
@@ -466,7 +465,7 @@ const emailData = () => {
 }
 
 .back-logo:active {
-  background-image: url("@/assets/images/back_arrow/back3.svg");
+  background-image: url("/images/back_arrow/back3.svg");
 }
 
 .boiler-card {
@@ -603,7 +602,7 @@ const emailData = () => {
   height: 32px;
   cursor: pointer;
   float: right;
-  background-image: url("@/assets/images/black_logos/close.svg");
+  background-image: url("/images/black_logos/close.svg");
   background-size: contain;
 }
 
@@ -706,7 +705,7 @@ input::placeholder {
     margin-bottom: 30px;
   }
   .back-logo {
-    background-image: url("@/assets/images/back_arrow/back2.svg");
+    background-image: url("/images/back_arrow/back2.svg");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;

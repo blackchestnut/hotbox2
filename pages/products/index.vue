@@ -257,6 +257,7 @@
 definePageMeta({
   name: "boiler",
 });
+
 import Menu from "/components/Menu.vue";
 import ProductsListMobile from "@/components/products_list_mobile.vue";
 import ProductsListDesktop from "@/components/products_list_desktop.vue";

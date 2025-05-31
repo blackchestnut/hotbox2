@@ -1,6 +1,6 @@
 <script setup>
 import Menu from "/components/Menu.vue";
-import partners_logo from "./partners_logo.vue";
+import partners_logo from "/components/partners_logo.vue";
 </script>
 
 <template>

@@ -11,5 +11,5 @@ export const links = [
   { text: "УСЛУГИ", path: "/service" },
   { text: "МОБИЛЬНЫЕ КОТЕЛЬНЫЕ", path: "/boiler_ford_transit" },
   { text: "НОВОСТИ", path: "/news" },
-  { text: "О НАС", path: "/about_us" },
+  { text: "О НАС", path: "/about" },
 ];

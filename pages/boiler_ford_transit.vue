@@ -1,5 +1,5 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO } from "@/helpers/constants";
+import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
 import { ref, computed } from "vue";
 import Menu from "/components/Menu.vue";
 import { car } from "/utils/data";

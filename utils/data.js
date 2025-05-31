@@ -1,35 +1,14 @@
 const boilers = [
   {
     path: "paku-500-kvt-1k-nr",
-    imgSrc: new URL(
-      "/public/images/boilers/paku-500-kvt-1k-nr/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/paku-500-kvt-1k-nr/1.png",
     images: [
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/1.png",
-        import.meta.url
-      ).href,
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/2.png",
-        import.meta.url
-      ).href,
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/3.jpg",
-        import.meta.url
-      ).href,
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/4.jpg",
-        import.meta.url
-      ).href,
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/5.jpg",
-        import.meta.url
-      ).href,
-      new URL(
-        "/public/images/boilers/paku-500-kvt-1k-nr/6.jpg",
-        import.meta.url
-      ).href,
+      "/images/boilers/paku-500-kvt-1k-nr/1.png",
+      "/images/boilers/paku-500-kvt-1k-nr/2.png",
+      "/images/boilers/paku-500-kvt-1k-nr/3.jpg",
+      "/images/boilers/paku-500-kvt-1k-nr/4.jpg",
+      "/images/boilers/paku-500-kvt-1k-nr/5.jpg",
+      "/images/boilers/paku-500-kvt-1k-nr/6.jpg",
     ],
     type: "ПАКУ 500 кВт 1К (Н/Р)",
     purpose: "Теплоснабжение",
@@ -64,23 +43,15 @@ const boilers = [
 
   {
     path: "bmak-1000-kvt-2k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-1000-kvt-2k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-1000-kvt-2k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/2.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/3.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/4.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/5.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1000-kvt-2k/6.jpg", import.meta.url)
-        .href,
+      "/images/boilers/bmak-1000-kvt-2k/1.png",
+      "/images/boilers/bmak-1000-kvt-2k/2.jpg",
+      "/images/boilers/bmak-1000-kvt-2k/3.jpg",
+      "/images/boilers/bmak-1000-kvt-2k/4.jpg",
+      "/images/boilers/bmak-1000-kvt-2k/5.jpg",
+      "/images/boilers/bmak-1000-kvt-2k/6.jpg",
     ],
     type: "ПАКУ 1000 кВт 2К (Н/Р)",
     purpose: "Теплоснабжение",
@@ -126,23 +97,15 @@ const boilers = [
   },
   {
     path: "bmak-1040-kvt-1k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-1040-kvt-1k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-1040-kvt-1k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/3.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/4.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/5.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1040-kvt-1k/6.jpg", import.meta.url)
-        .href,
+      "/images/boilers/bmak-1040-kvt-1k/1.png",
+      "/images/boilers/bmak-1040-kvt-1k/2.png",
+      "/images/boilers/bmak-1040-kvt-1k/3.jpg",
+      "/images/boilers/bmak-1040-kvt-1k/4.jpg",
+      "/images/boilers/bmak-1040-kvt-1k/5.jpg",
+      "/images/boilers/bmak-1040-kvt-1k/6.jpg",
     ],
     type: "БМАК 1040 кВт 1К",
     purpose: "Теплоснабжение",
@@ -190,23 +153,14 @@ const boilers = [
   },
   {
     path: "bmak-1200-kvt-1k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-1200-kvt-1k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-1200-kvt-1k/1.png",
     images: [
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/3.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/4.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/5.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1200-kvt-1k/6.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-1200-kvt-1k/1.png",
+      "/images/boilers/bmak-1200-kvt-1k/2.png",
+      "/images/boilers/bmak-1200-kvt-1k/3.png",
+      "/images/boilers/bmak-1200-kvt-1k/4.png",
+      "/images/boilers/bmak-1200-kvt-1k/5.png",
+      "/images/boilers/bmak-1200-kvt-1k/6.png",
     ],
     type: "БМАК 1200 кВт 1К",
     purpose: "Теплоснабжение",
@@ -233,25 +187,15 @@ const boilers = [
   },
   {
     path: "bmak-1400-kvt-1k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-1400-kvt-1k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-1400-kvt-1k/1.png",
     images: [
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/3.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/4.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/5.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/6.jpg", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1400-kvt-1k/7.jpg", import.meta.url)
-        .href,
+      "/images/boilers/bmak-1400-kvt-1k/1.png",
+      "/images/boilers/bmak-1400-kvt-1k/2.png",
+      "/images/boilers/bmak-1400-kvt-1k/3.jpg",
+      "/images/boilers/bmak-1400-kvt-1k/4.jpg",
+      "/images/boilers/bmak-1400-kvt-1k/5.jpg",
+      "/images/boilers/bmak-1400-kvt-1k/6.jpg",
+      "/images/boilers/bmak-1400-kvt-1k/7.jpg",
     ],
     type: "БМАК 1400 кВт 1К",
     purpose: "Теплоснабжение",
@@ -285,25 +229,16 @@ const boilers = [
   },
   {
     path: "bmak-1600-kvt-1k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-1600-kvt-1k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-1600-kvt-1k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/3.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/4.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/5.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/6.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-1600-kvt-1k/7.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-1600-kvt-1k/1.png",
+      "/images/boilers/bmak-1600-kvt-1k/2.png",
+      "/images/boilers/bmak-1600-kvt-1k/3.png",
+      "/images/boilers/bmak-1600-kvt-1k/4.png",
+      "/images/boilers/bmak-1600-kvt-1k/5.png",
+      "/images/boilers/bmak-1600-kvt-1k/6.png",
+      "/images/boilers/bmak-1600-kvt-1k/7.png",
     ],
     type: "БМАК 1600 кВт 1К",
     purpose: "Теплоснабжение",
@@ -330,25 +265,16 @@ const boilers = [
   },
   {
     path: "bmak-4800-kvt-2k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-4800-kvt-2k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-4800-kvt-2k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/3.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/4.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/5.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/6.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-4800-kvt-2k/7.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-4800-kvt-2k/1.png",
+      "/images/boilers/bmak-4800-kvt-2k/2.png",
+      "/images/boilers/bmak-4800-kvt-2k/3.png",
+      "/images/boilers/bmak-4800-kvt-2k/4.png",
+      "/images/boilers/bmak-4800-kvt-2k/5.png",
+      "/images/boilers/bmak-4800-kvt-2k/6.png",
+      "/images/boilers/bmak-4800-kvt-2k/7.png",
     ],
     type: "БМАК 4800 кВт 2К",
     purpose: "Теплоснабжение",
@@ -372,25 +298,15 @@ const boilers = [
   },
   {
     path: "bmak-6000-kvt-2k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-6000-kvt-2k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-6000-kvt-2k/1.png",
     images: [
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/3.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/4.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/5.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/6.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6000-kvt-2k/7.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-6000-kvt-2k/1.png",
+      "/images/boilers/bmak-6000-kvt-2k/2.png",
+      "/images/boilers/bmak-6000-kvt-2k/3.png",
+      "/images/boilers/bmak-6000-kvt-2k/4.png",
+      "/images/boilers/bmak-6000-kvt-2k/5.png",
+      "/images/boilers/bmak-6000-kvt-2k/6.png",
+      "/images/boilers/bmak-6000-kvt-2k/7.png",
     ],
     type: "БМАК 6000 кВт 2К",
     purpose: "Теплоснабжение",
@@ -417,17 +333,12 @@ const boilers = [
   },
   {
     path: "bmak-6100-kvt-2k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-6100-kvt-2k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-6100-kvt-2k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-6100-kvt-2k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6100-kvt-2k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-6100-kvt-2k/3.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-6100-kvt-2k/1.png",
+      "/images/boilers/bmak-6100-kvt-2k/2.png",
+      "/images/boilers/bmak-6100-kvt-2k/3.png",
     ],
     type: "БМАК 6100 кВт 2К",
     purpose: "Теплоснабжение",
@@ -456,25 +367,16 @@ const boilers = [
   },
   {
     path: "bmak-7400-kvt-2k",
-    imgSrc: new URL(
-      "/public/images/boilers/bmak-7400-kvt-2k/1.png",
-      import.meta.url
-    ).href,
+    imgSrc: "/images/boilers/bmak-7400-kvt-2k/1.png",
+
     images: [
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/1.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/2.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/3.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/4.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/5.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/6.png", import.meta.url)
-        .href,
-      new URL("/public/images/boilers/bmak-7400-kvt-2k/7.png", import.meta.url)
-        .href,
+      "/images/boilers/bmak-7400-kvt-2k/1.png",
+      "/images/boilers/bmak-7400-kvt-2k/2.png",
+      "/images/boilers/bmak-7400-kvt-2k/3.png",
+      "/images/boilers/bmak-7400-kvt-2k/4.png",
+      "/images/boilers/bmak-7400-kvt-2k/5.png",
+      "/images/boilers/bmak-7400-kvt-2k/6.png",
+      "/images/boilers/bmak-7400-kvt-2k/7.png",
     ],
     type: "БМАК 7400 кВт 2К",
     purpose: "Теплоснабжение",

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { links } from "@/helpers/constants";
+import { links } from "~/utils/constants";
 export default {
   data() {
     return {
