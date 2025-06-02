@@ -2,9 +2,9 @@
   <div class="items-mobile">
     <div class="item-pair" v-for="(pair, index) in productsPairs" :key="index">
       <template v-for="(item, itemIndex) in pair" :key="itemIndex">
-        <router-link
+        <NuxtLink
           class="item"
-          :to="{ name: 'boiler', params: { id: item.path } }"
+          :to="{ name: 'products-id', params: { id: item.path } }"
         >
           <div class="item-content">
             <img :src="item.imgSrc" class="item-img" :alt="item.type" />
@@ -12,7 +12,7 @@
             <div class="description">{{ item.mobileDescription }}<br /></div>
           </div>
           <div class="details-button">ПОДРОБНЕЕ</div>
-        </router-link>
+        </NuxtLink>
       </template>
     </div>
   </div>
