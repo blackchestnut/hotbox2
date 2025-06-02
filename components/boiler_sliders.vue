@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router"; // Импортируем useRouter для навигации
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper";
+import { boilers } from "/utils/data";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,7 +30,8 @@ function updateIsMobile() {
 const modules = [Pagination];
 const ITEMS_ON_PAGE = 3;
 
-const slides = [
+// TODO: Delete
+const slides_to_delete = [
   {
     text: "ПАКУ 500 кВт 1К (Н/Р)",
     image: "/images/boilers/paku-500-kvt-1k-nr/1.png",
@@ -96,7 +98,7 @@ const slides = [
 const swiperInstance = ref(null);
 const currentPage = ref(0);
 
-const totalPages = Math.ceil(slides.length / ITEMS_ON_PAGE);
+const totalPages = Math.ceil(boilers.length / ITEMS_ON_PAGE);
 
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper;
@@ -122,8 +124,8 @@ const goToPage = (index) => {
 };
 
 const showDetails = (index) => {
-  const selectedSlide = slides[index];
-  router.push(selectedSlide.link); // Используем роутер для перехода
+  const selectedSlide = boilers[index];
+  router.push({ name: "products-id", params: { id: selectedSlide.path } }); // Используем роутер для перехода
 };
 </script>
 
@@ -149,21 +151,24 @@ const showDetails = (index) => {
               class="mySwiper"
               @swiper="onSwiper"
             >
-              <swiper-slide v-for="(slide, index) in slides" :key="index">
+              <swiper-slide v-for="(slide, index) in boilers" :key="index">
                 <div
                   class="slide-inner"
                   @click="isMobile ? showDetails(index) : null"
                 >
                   <img
-                    :src="slide.image"
+                    :src="slide.images[0]"
                     alt="Slide Image"
                     class="slide-image"
                   />
-                  <div class="label">{{ slide.text }}</div>
-                  <div class="description">{{ slide.description }}</div>
-                  <button class="details-button" @click="showDetails(index)">
+                  <div class="label">{{ slide.type }}</div>
+                  <div class="description">{{ slide.sliderDescription }}</div>
+                  <NuxtLink
+                    class="btn btn-white btn-small details-button"
+                    :to="{ name: 'products-id', params: { id: slide.path } }"
+                  >
                     ПОДРОБНЕЕ
-                  </button>
+                  </NuxtLink>
                 </div>
               </swiper-slide>
             </swiper>
@@ -171,7 +176,7 @@ const showDetails = (index) => {
           </div>
 
           <div class="slider-navigation">
-            <button class="b-slider-prev" @click="goToPrevSlide">
+            <button class="b-slider-prev btn btn-black" @click="goToPrevSlide">
               <img src="\images\arrows\Vector.svg" />
             </button>
             <div class="pagination-buttons">
@@ -187,13 +192,13 @@ const showDetails = (index) => {
                 {{ index + 1 }}
               </button>
             </div>
-            <button class="b-slider-next" @click="goToNextSlide">
+            <button class="b-slider-next btn btn-black" @click="goToNextSlide">
               <img src="\images\arrows\Vector1.svg" />
             </button>
           </div>
-          <router-link to="/products">
-            <button class="full-catalog">ПОЛНЫЙ КАТАЛОГ</button>
-          </router-link>
+          <NuxtLink class="btn btn-black" to="/products">
+            ПОЛНЫЙ КАТАЛОГ
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -233,9 +238,9 @@ const showDetails = (index) => {
   background-color: #ebebeb;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  cursor: pointer;
   border: 1px solid #e2e1e7;
 }
+
 .label {
   font-size: 20px;
   font-weight: bold;
@@ -252,25 +257,11 @@ const showDetails = (index) => {
 .b-slider-next {
   width: 40px;
   height: 40px;
-  background-color: #000000;
-  border-radius: 8px;
-  border-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
-.b-slider-prev:hover,
-.b-slider-next:hover {
-  background-color: #474a4d;
-  border-color: #474a4d;
-}
-.b-slider-prev:active,
-.b-slider-next:active {
-  background-color: #474a4d;
-  border-color: #696770;
-  color: white;
-}
+
 .pagination-buttons {
   display: flex;
   justify-content: center;
@@ -284,53 +275,23 @@ const showDetails = (index) => {
   border-color: #ffffff;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
 }
 .pagination-button:hover {
   background-color: #474a4d;
   border-color: #474a4d;
+  color: white;
 }
 .pagination-button:active {
   background-color: black;
   border-color: black;
   color: white;
 }
-.details-button {
-  width: 132px;
-  height: 40px;
-  background-color: #fff;
-  color: #3b3b3b;
-  border-color: #3b3b3b;
-  border-radius: 8px;
-  border: 2px solid #3b3b3b;
-  transition: background-color 0.3s ease;
-  font-size: 15px;
-}
-.details-button:hover {
-  border-color: #000000;
-  color: #000000;
-}
-.details-button:active {
-  border-color: #696770;
-  color: #696770;
-}
 .slide-image {
   width: 100%;
-}
-.full-catalog {
-  width: 238px;
-  height: 50px;
-  color: white;
-  background-color: #000000;
-  border: 3px solid #000000;
-  font-size: 20px;
-}
-.full-catalog:hover {
-  background-color: #474a4d;
-  border: 3px solid #474a4d;
-}
-.full-catalog:active {
-  background-color: #343638;
-  border: 3px solid #474a4d;
 }
 .description {
   padding-top: 25px;
@@ -408,11 +369,6 @@ const showDetails = (index) => {
     margin-top: 12px;
     text-align: center;
     margin-bottom: 30px;
-  }
-  .full-catalog {
-    width: 192px;
-    height: 40px;
-    font-size: 16px;
   }
 }
 </style>
