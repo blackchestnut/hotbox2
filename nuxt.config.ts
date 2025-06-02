@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
+  modules: ["@nuxtjs/sitemap"],
   css: ["~/assets/main.css"],
   build: {
     transpile: ["swiper"],
@@ -15,5 +16,12 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  site: {
+    url: "https://hotboxrf.ru/",
+  },
+  sitemap: {
+    xsl: false,
+    // exclude: ["/resume/resume"],
   },
 });
