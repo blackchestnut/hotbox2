@@ -324,15 +324,6 @@ const isProductsPresent = () => {
   return filteredAndSortedBoilers.length > 0;
 };
 
-const pairedBoilers = computed(() => {
-  const pairs = [];
-  for (let i = 0; i < filteredAndSortedBoilers.value.length; i += 2) {
-    const pair = filteredAndSortedBoilers.value.slice(i, i + 2);
-    pairs.push(pair);
-  }
-  return pairs;
-});
-
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
 };
