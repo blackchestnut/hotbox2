@@ -95,7 +95,9 @@ function callManager() {
       <router-link to="/">
         <div class="logo"></div>
       </router-link>
-      <button class="call-button" @click="callEngineer">ЗВОНОК ИНЖЕНЕРУ</button>
+      <button class="btn call-button" @click="callEngineer">
+        ЗВОНОК ИНЖЕНЕРУ
+      </button>
       <div class="icon-mobile-headphones" @click="openMobileContacts"></div>
     </div>
 

@@ -104,14 +104,14 @@ const emailData = () => {
 
         <div class="fuel-container">
           <button
-            class="fuel"
+            class="btn btn-white fuel"
             :class="{ active: selectedFuel === 'Газ' }"
             @click="toggleFuel('Газ')"
           >
             Газ
           </button>
           <button
-            class="fuel"
+            class="btn btn-white fuel"
             :class="{ active: selectedFuel === 'Дизель' }"
             @click="toggleFuel('Дизель')"
           >
@@ -123,14 +123,14 @@ const emailData = () => {
 
         <div class="gvs-container">
           <button
-            class="gvs"
+            class="btn btn-white gvs"
             :class="{ active: selectedGVS === 'С подключением' }"
             @click="toggleGVS('С подключением')"
           >
             С подключением
           </button>
           <button
-            class="gvs"
+            class="btn btn-white gvs"
             :class="{ active: selectedGVS === 'Без подключения' }"
             @click="toggleGVS('Без подключения')"
           >
@@ -141,7 +141,9 @@ const emailData = () => {
           Цена предоставляется по запросу
         </div>
 
-        <button class="buy" @click.prevent="showOrderModal">ЗАКАЗАТЬ</button>
+        <button class="btn buy" @click.prevent="showOrderModal">
+          ЗАКАЗАТЬ
+        </button>
 
         <div class="pacu">
           ПАКУ имеет наружное размещение. Есть возможность<br />
@@ -530,16 +532,12 @@ const emailData = () => {
 
 .fuel,
 .gvs {
-  border-radius: 8px;
+  padding: 8px;
   color: #868686;
   background-color: #fff;
   border: 2px solid #868686;
-  width: 76px;
-  height: 40px;
-}
-
-.gvs {
-  width: 160px;
+  font-size: 16px;
+  min-width: 80px;
 }
 
 .active {
@@ -549,8 +547,6 @@ const emailData = () => {
 }
 
 .buy {
-  width: 120px;
-  height: 54px;
   margin-bottom: 30px;
 }
 
@@ -751,24 +747,16 @@ input::placeholder {
   }
   .fuel {
     font-size: 13px;
-    width: 60px;
-    height: 30px;
-    padding: 0px;
   }
   .gvs-container {
     padding: 0px;
   }
   .gvs {
-    width: 130px;
-    height: 30px;
     font-size: 13px;
     margin-bottom: 16px;
   }
   .buy {
-    max-width: 90px;
-    max-height: 40px;
     font-size: 14px;
-    font-weight: 500;
   }
   .pacu {
     font-size: 16px;
