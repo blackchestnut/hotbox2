@@ -121,7 +121,9 @@ const emailData = () => {
       </div>
     </div>
     <div class="button-order">
-      <button class="order" @click.prevent="showOrderModal">ЗАКАЗАТЬ</button>
+      <button class="btn order" @click.prevent="showOrderModal">
+        ЗАКАЗАТЬ
+      </button>
     </div>
 
     <!--------------------------------------------------------------------------------->

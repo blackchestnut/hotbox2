@@ -160,7 +160,7 @@ const emailData = () => {
     <div class="plan"></div>
     <div class="button-order">
       <button
-        class="order"
+        class="btn order"
         @click="showOrderModal('Производство котельной на заказ')"
       >
         ЗАКАЗАТЬ
@@ -180,7 +180,10 @@ const emailData = () => {
       </div>
     </div>
     <div class="button-order">
-      <button class="order" @click="showOrderModal('Ремонт и обслуживание')">
+      <button
+        class="btn order"
+        @click="showOrderModal('Ремонт и обслуживание')"
+      >
         ЗАКАЗАТЬ
       </button>
     </div>

@@ -178,8 +178,6 @@ body {
 }
 
 .order {
-  width: 120px;
-  height: 54px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -253,5 +251,9 @@ body {
   .close {
     width: 24px;
     height: 24px;
+  }
+
+  .order {
+    font-size: 14px;
   }
 }
