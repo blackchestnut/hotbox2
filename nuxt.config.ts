@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: "/hotbox2/",
+    baseURL: process.env.NODE_ENV === "production" ? "/hotbox2/" : "/",
   },
   site: {
     url: "https://hotboxrf.ru/",
