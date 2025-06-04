@@ -16,7 +16,6 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: "/hotbox2/",
   },
   site: {
     url: "https://hotboxrf.ru/",
