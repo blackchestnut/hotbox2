@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   modules: ["@nuxtjs/sitemap"],
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/main.css",
+  ],
   build: {
     transpile: ["swiper"],
   },
@@ -16,7 +18,8 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: process.env.NODE_ENV === "production" ? "/hotbox2/" : "/",
+    // baseURL: process.env.NODE_ENV === "production" ? "/hotbox2/" : "/",
+    baseURL: '/',
   },
   site: {
     url: "https://hotbox2.igor.kalinichev.net",
