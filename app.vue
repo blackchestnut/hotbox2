@@ -1,5 +1,5 @@
 <script setup>
-import FooterComponent from "@/components/Footer.vue";
+import FooterComponent from "@/components/footer.vue";
 import TopBarComponent from "@/components/top_bar.vue";
 </script>
 
