@@ -8,8 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "replace-images-paths": "node replace_images_paths.js",
-    "deploy": "nuxt generate && npm run replace-images-paths && gh-pages -d .output/public"
+    "deploy": "nuxt generate && gh-pages -d .output/public"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^7.3.0",
