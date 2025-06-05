@@ -104,7 +104,6 @@ p {
   color: #696770;
 }
 
-/* Inter Regular */
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff2") format("woff2");
@@ -114,7 +113,6 @@ p {
   font-display: swap;
 }
 
-/* Inter Bold */
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Bold.woff2") format("woff2");
@@ -124,14 +122,14 @@ p {
   font-display: swap;
 }
 
-/* Применение шрифта */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 /* Контейнер для кнопки отправки */
 .submit-container {
   display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
+  justify-content: center;
   margin: 0 auto;
   margin-top: 10px;
 }
