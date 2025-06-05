@@ -75,7 +75,7 @@ const emailData = () => {
       <div class="note">
         Нажимая на кнопку, вы даете согласие на обработку персональных данных и
         соглашаетесь c
-        <router-link to="/privacy">политикой конфиденциальности</router-link>
+        <NuxtLink to="/privacy">политикой конфиденциальности</NuxtLink>
       </div>
     </div>
   </div>

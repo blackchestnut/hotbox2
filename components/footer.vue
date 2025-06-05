@@ -30,7 +30,7 @@ import {
           <h3>О НАС</h3>
           <ul>
             <li>
-              <NuxtLink to="/about/">О компании</NuxtLink>
+              <NuxtLink to="/about">О компании</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/about/#partners">Партнеры</NuxtLink>

@@ -6,10 +6,6 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.css",
   ],
-  ssr: true,
-  //build: {
-  //  transpile: ["swiper"],
-  //},
   app: {
     head: {
       script: [
@@ -21,11 +17,22 @@ export default defineNuxtConfig({
     },
     baseURL: '/',
   },
+  ssr: true,
+  experimental: {
+    defaults: {
+      // https://nuxt.com/docs/api/components/nuxt-link#in-nuxt-config
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
+  },
   site: {
     url: "https://hotbox2.igor.kalinichev.net",
+    trailingSlash: true,
   },
+  // https://nuxtseo.com/docs/sitemap/api/config
+  // https://github.com/nuxt-modules/sitemap/blob/main/src/runtime/types.ts
   sitemap: {
     xsl: false,
-    // exclude: ["/resume/resume"],
   },
 });
