@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+
 const props = defineProps(["selectedCar", "selectedImage"]);
 const count = ref(1);
 

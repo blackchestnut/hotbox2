@@ -11,7 +11,7 @@
         соответствует нормативным документам
       </div>
     </div>
-    <partners_logo />
+    <PartnersLogo />
   </article>
 </template>
 

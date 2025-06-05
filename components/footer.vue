@@ -4,7 +4,7 @@ import {
   SUPPORT_EMAIL_MAILTO,
   SUPPORT_PHONE,
   SUPPORT_PHONE_TEL,
-} from "~/utils/constants";
+} from "@/utils/constants";
 </script>
 
 <template>

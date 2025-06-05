@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router"; // Импортируем useRouter для навигации
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper";
-import { boilers } from "/utils/data";
+import { boilers } from "@/utils/data";
 
 import "swiper/css";
 import "swiper/css/pagination";

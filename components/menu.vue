@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import { links } from "~/utils/constants";
+import { links } from "@/utils/constants";
+
 export default {
   data() {
     return {

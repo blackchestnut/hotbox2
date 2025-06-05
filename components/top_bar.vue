@@ -1,13 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
-import { SUPPORT_EMAIL, SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
-import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { SUPPORT_EMAIL, SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import { links } from "@/utils/constants";
 
 const route = useRoute();
-
-import { links } from "~/utils/constants";
 
 const activeLink = computed(() => {
   const index = links.findIndex(
@@ -15,9 +12,8 @@ const activeLink = computed(() => {
       link.path === route.path || route.path.includes(link.extraMatchPath)
   );
 
-  console.log(route.path);
-  console.log(route.path.includes("kotelnye"));
-
+  // console.log(route.path);
+  // console.log(route.path.includes("kotelnye"));
   return index !== -1 ? index : 0;
 });
 
