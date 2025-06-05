@@ -107,7 +107,7 @@ p {
 /* Inter Regular */
 @font-face {
   font-family: "Inter";
-  src: url("assets/fonts/web/Inter-Regular.woff2") format("woff2");
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
 
   font-weight: 400;
   font-style: normal;
@@ -117,7 +117,7 @@ p {
 /* Inter Bold */
 @font-face {
   font-family: "Inter";
-  src: url("assets/fonts/web/Inter-Bold.woff2") format("woff2");
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
 
   font-weight: 600;
   font-style: normal;
