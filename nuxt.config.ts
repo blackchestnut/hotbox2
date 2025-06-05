@@ -19,8 +19,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    // baseURL: process.env.NODE_ENV === "production" ? "/hotbox2/" : "/",
-    baseURL: '/',
+    baseURL: process.env.NODE_ENV === "production" ? "/hotbox2/" : "/",
   },
   site: {
     url: "https://hotbox2.igor.kalinichev.net",
