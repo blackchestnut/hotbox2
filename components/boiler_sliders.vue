@@ -110,7 +110,7 @@ const showDetails = (index) => {
 
           <div class="slider-navigation">
             <button class="b-slider-prev btn btn-black" @click="goToPrevSlide">
-              <img src="\images\arrows\Vector.svg" />
+              <img src="/images/arrows/Vector.svg" />
             </button>
             <div class="pagination-buttons">
               <button
@@ -126,7 +126,7 @@ const showDetails = (index) => {
               </button>
             </div>
             <button class="b-slider-next btn btn-black" @click="goToNextSlide">
-              <img src="\images\arrows\Vector1.svg" />
+              <img src="/images/arrows/Vector1.svg" />
             </button>
           </div>
           <NuxtLink class="btn btn-black" to="/products">

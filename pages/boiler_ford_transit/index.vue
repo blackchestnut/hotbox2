@@ -75,7 +75,7 @@ const emailData = () => {
         <div class="Nameline">
           <div class="subtitle">
             <img
-              src="\images\white_logos\power-logo.svg"
+              src="/images/white_logos/power-logo.svg"
               alt="Power Logo"
               class="power-logo"
             />Мощность
@@ -92,7 +92,7 @@ const emailData = () => {
         <div class="Nameline">
           <div class="subtitle">
             <img
-              src="\images\white_logos\curcle-logo.svg"
+              src="/images/white_logos/curcle-logo.svg"
               alt="Curcle Logo"
               class="-logo"
             />Область применения
@@ -109,7 +109,7 @@ const emailData = () => {
         <div class="Nameline">
           <div class="subtitle">
             <img
-              src="\images\white_logos\arrow-logo.svg"
+              src="/images/white_logos/arrow-logo.svg"
               alt="Arrow Logo"
               class="arrow-logo"
             />Варианты реализации

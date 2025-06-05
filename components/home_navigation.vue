@@ -11,7 +11,7 @@
         с полным удаленным управлением
       </h2>
       <img
-        src="\images\red_logos\award.svg"
+        src="/images/red_logos/award.svg"
         alt="Работаем по всей России"
         class="award-logo"
       />
