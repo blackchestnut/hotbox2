@@ -6,9 +6,10 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.css",
   ],
-  build: {
-    transpile: ["swiper"],
-  },
+  ssr: true,
+  //build: {
+  //  transpile: ["swiper"],
+  //},
   app: {
     head: {
       script: [
