@@ -1,9 +1,10 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO } from "~/utils/constants";
+import { SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
 import { ref, computed } from "vue";
-import Menu from "/components/Menu.vue";
-import { car } from "/utils/data";
-import order_boiler_ford_transit from "/components/order_boiler_ford_transit.vue";
+import Menu from "@/components/Menu.vue";
+import { car } from "@/utils/data";
+import OrderBoilerFordTransit from "@/components/order_boiler_ford_transit.vue";
+
 const currentImageIndex = ref(0);
 const selectedCar = ref("");
 const selectedImage = ref("");
@@ -11,11 +12,11 @@ const isOrderModalVisible = ref(false);
 const images = car[0].images;
 
 const showOrderModal = () => {
-  console.log("Opening modal..."); // Отладка
+  // console.log("Opening modal..."); // Отладка
   selectedCar.value = car[0].name;
   selectedImage.value = images[currentImageIndex.value];
   isOrderModalVisible.value = true;
-  console.log("isOrderModalVisible:", isOrderModalVisible.value); // Отладка
+  // console.log("isOrderModalVisible:", isOrderModalVisible.value); // Отладка
 };
 const closeOrderModal = () => {
   isOrderModalVisible.value = false;
@@ -140,7 +141,7 @@ const emailData = () => {
         <div class="line"></div>
 
         <div class="information-container">
-          <order_boiler_ford_transit
+          <OrderBoilerFordTransit
             :selectedCar="selectedCar"
             :selectedImage="selectedImage"
           />

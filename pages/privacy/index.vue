@@ -1,6 +1,7 @@
 <script setup>
-import Menu from "/components/Menu.vue";
+import Menu from "@/components/menu.vue";
 </script>
+
 <template>
   <Menu />
   <div class="page-container">

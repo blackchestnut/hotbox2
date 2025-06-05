@@ -258,11 +258,11 @@ definePageMeta({
   name: "boiler",
 });
 
-import Menu from "/components/Menu.vue";
+import { ref, computed } from "vue";
+import Menu from "@/components/menu.vue";
 import ProductsListMobile from "@/components/products_list_mobile.vue";
 import ProductsListDesktop from "@/components/products_list_desktop.vue";
-import { ref, computed } from "vue";
-import { boilers } from "/utils/data";
+import { boilers } from "@/utils/data";
 
 const boilerCounts = [1, 2];
 const maxPowers = [500, 1200, 1400, 1600, 4800, 6000, 6100, 7400];

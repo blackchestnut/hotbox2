@@ -121,6 +121,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "YandexMap",
@@ -157,6 +158,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .about-company {
   text-align: left; /* Центрирование текста внутри контейнера */
