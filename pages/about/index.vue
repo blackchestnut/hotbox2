@@ -67,7 +67,7 @@
     </div>
 
     <div class="partners-wrapper">
-      <div class="our-partners">Наши партнеры</div>
+      <div id='partners' class="our-partners">Наши партнеры</div>
       <PartnersLogo />
     </div>
 

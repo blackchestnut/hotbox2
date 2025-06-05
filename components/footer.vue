@@ -14,23 +14,27 @@ import {
         <div class="footer-column">
           <h3>УСЛУГИ</h3>
           <ul>
-            <li><router-link to="/service">Производство</router-link></li>
-            <li><router-link to="/service">Аренда</router-link></li>
+            <li><NuxtLink to="/service/">Производство</NuxtLink></li>
+            <li><NuxtLink to="/service/">Аренда</NuxtLink></li>
             <li>
-              <router-link to="/service">Ремонт и обслуживание</router-link>
+              <NuxtLink to="/service/">Ремонт и обслуживание</NuxtLink>
             </li>
             <li>
-              <router-link to="/boiler_ford_transit"
-                >Мобильная котельная на базе Ford Transit</router-link
-              >
+              <NuxtLink to="/boiler_ford_transit/">
+                Мобильная котельная на базе Ford Transit
+              </NuxtLink>
             </li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>О НАС</h3>
           <ul>
-            <li><router-link to="/about">О компании</router-link></li>
-            <li><router-link to="/about">Партнеры</router-link></li>
+            <li>
+              <NuxtLink to="/about/">О компании</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/about/#partners">Партнеры</NuxtLink>
+            </li>
           </ul>
         </div>
         <div class="footer-column">
