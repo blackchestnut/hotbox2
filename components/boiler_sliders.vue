@@ -27,9 +27,7 @@ function updateIsMobile() {
   isMobile.value = window.innerWidth <= MOBILE_WIDTH_LIMIT;
 }
 
-const modules = [Pagination];
 const ITEMS_ON_PAGE = 3;
-
 const swiperInstance = ref(null);
 const currentPage = ref(0);
 
@@ -78,7 +76,7 @@ const showDetails = (index) => {
         <div class="container">
           <div class="swiper-wrapper-container">
             <swiper
-              :modules="modules"
+              :modules="[Pagination]"
               :slides-per-view="isMobile ? 1 : 3"
               :space-between="isMobile ? 16 : 30"
               :slides-per-group="1"

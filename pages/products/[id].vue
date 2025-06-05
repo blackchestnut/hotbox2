@@ -92,8 +92,8 @@ const emailData = () => {
         class="boiler-card"
         :style="{ backgroundImage: 'url(' + images[currentImageIndex] + ')' }"
       >
-        <button class="arrow-button left" @click="prevImage">🡨</button>
-        <button class="arrow-button right" @click="nextImage">🡪</button>
+        <button class="arrow-button left" @click="prevImage">❮</button>
+        <button class="arrow-button right" @click="nextImage">❯</button>
       </div>
 
       <div class="characteristic">
