@@ -6,17 +6,18 @@ const clientName = ref("");
 const clientEmail = ref("");
 const clientPhone = ref("");
 const formMessage = ref("");
+const isSubmitting = ref(false);
 
 const isSubmitDisabled = computed(() => {
-  return !clientName.value || !clientEmail.value || !clientPhone.value;
-});
-
-const isLocalSubmitDisabled = computed(() => {
-  return isSubmitDisabled.value || !formMessage.value.trim();
+  return !clientName.value.trim() ||
+    !clientEmail.value.trim() ||
+    !clientPhone.value.trim() ||
+    !formMessage.value.trim() ||
+    isSubmitting.value;
 });
 
 const sendMessage = async () => {
-  if (isLocalSubmitDisabled.value) return;
+  if (isSubmitDisabled.value) return;
 
   const message = `**Заявка на заказ**\n` +
     `Имя: ${clientName.value}\n` +
@@ -24,7 +25,8 @@ const sendMessage = async () => {
     `Телефон: ${clientPhone.value}\n` +
     `Услуга: ${formMessage.value}`;
 
-  if (sendLeadMessage(message)) {
+  isSubmitting.value = true;
+  if (await sendLeadMessage(message)) {
     alert('Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время');
     clientName.value = '';
     clientEmail.value = '';
@@ -33,7 +35,12 @@ const sendMessage = async () => {
   } else {
     alert('Ошибка. Не удалось отправить');
   }
+  isSubmitting.value = false;
 };
+
+const submitButtonText = () => {
+  return isSubmitting.value ? 'Отправить...' : 'Отправить';
+}
 
 </script>
 <template>
@@ -69,10 +76,10 @@ const sendMessage = async () => {
           <div class="b-input">
             <a
               class="submit"
-              :class="{ disabled: isLocalSubmitDisabled }"
+              :class="{ disabled: isSubmitDisabled }"
               @click="sendMessage()"
             >
-              Отправить
+              {{ submitButtonText() }}
             </a>
           </div>
         </div>
