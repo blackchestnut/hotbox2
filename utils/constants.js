@@ -13,17 +13,15 @@ export const links = [
   { text: "О НАС", path: "/about/" },
 ];
 
-export const WEBHOOK_URL = 'https://discord.com/api/webhooks/1381270268122501292/vCHEBw6h0ux5ok2yce9iAzAtTnUbQOSi7-pyqSfkNZrBGGb84N2VNeikHK8Y6d-e_Kao'
+export const WEBHOOK_URL =
+  "https://discord.com/api/webhooks/1381270268122501292/vCHEBw6h0ux5ok2yce9iAzAtTnUbQOSi7-pyqSfkNZrBGGb84N2VNeikHK8Y6d-e_Kao";
 export const sendLeadMessage = async (text) => {
   try {
-    const { status, error } = await useFetch(
-      WEBHOOK_URL,
-      {
-        method: 'post',
-        body: { content: text }
-      }
-    );
-    return status.value === "success";
+    await $fetch(WEBHOOK_URL, {
+      method: "post",
+      body: { content: text },
+    });
+    return true;
   } catch (e) {
     console.error(e);
     return false;
