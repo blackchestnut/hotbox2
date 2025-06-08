@@ -1,5 +1,5 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
 import { ref, computed } from "vue";
 import Menu from "@/components/menu.vue";
 import { car } from "@/utils/data";
@@ -34,14 +34,26 @@ const clientPhone = ref("");
 const isSubmitDisabled = computed(() => {
   return !clientName.value || !clientEmail.value || !clientPhone.value;
 });
-const emailData = () => {
-  return (
-    `${SUPPORT_EMAIL_MAILTO}?subject=Заявка на заказ` +
-    `&body=Имя: ${encodeURIComponent(clientName)}%0A` +
-    `Email: ${encodeURIComponent(clientEmail)}%0A` +
-    `Телефон: ${encodeURIComponent(clientPhone)}%0A` +
-    `Количество: ${encodeURIComponent(count)}`
-  );
+
+const sendMessage = async () => {
+  if (isSubmitDisabled.value) return;
+
+  const message =
+    `**Заявка на заказ**\n` +
+    `Имя: ${clientName.value}\n` +
+    `Email: ${clientEmail.value}\n` +
+    `Телефон: ${clientPhone.value}\n` +
+    `Что заказано: ${selectedCar.value}` +
+    `Количество: ${count.value}`;
+
+  if (await sendLeadMessage(message)) {
+    alert(
+      "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
+    );
+    closeOrderModal();
+  } else {
+    alert("Ошибка. Не удалось отправить");
+  }
 };
 </script>
 
@@ -173,9 +185,9 @@ const emailData = () => {
             <a
               class="submit-button"
               type="submit"
-              :href="emailData()"
               :class="{ disabled: isSubmitDisabled }"
               :disabled="isSubmitDisabled"
+              @click="sendMessage()"
             >
               Отправить
             </a>

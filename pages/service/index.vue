@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import Menu from "@/components/menu.vue";
-import { SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
 
 const isOrderModalVisible = ref(false);
 const selectedOrder = ref(null);
@@ -39,15 +39,25 @@ const closeOrderModal = () => {
   count.value = 1;
 };
 
-const emailData = () => {
-  return (
-    `${SUPPORT_EMAIL_MAILTO}?subject=Заявка на заказ - ${selectedOrder.value}` +
-    `&body=Имя: ${encodeURIComponent(clientName.value)}%0A` +
-    `Email: ${encodeURIComponent(clientEmail.value)}%0A` +
-    `Телефон: ${encodeURIComponent(clientPhone.value)}%0A` +
-    `Количество: ${encodeURIComponent(count.value)}%0A` +
-    `Выбранный товар: ${encodeURIComponent(selectedOrder.value)}`
-  );
+const sendMessage = async () => {
+  if (isSubmitDisabled.value) return;
+
+  const message =
+    `**Заявка на заказ**\n` +
+    `Имя: ${clientName.value}\n` +
+    `Email: ${clientEmail.value}\n` +
+    `Телефон: ${clientPhone.value}\n` +
+    `Что заказано: ${selectedOrder.value}` +
+    `Количество: ${count.value}`;
+
+  if (await sendLeadMessage(message)) {
+    alert(
+      "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
+    );
+    closeOrderModal();
+  } else {
+    alert("Ошибка. Не удалось отправить");
+  }
 };
 </script>
 
@@ -222,9 +232,8 @@ const emailData = () => {
           <a
             class="submit-button"
             type="submit"
-            :href="emailData()"
             :class="{ disabled: isSubmitDisabled }"
-            :disabled="isSubmitDisabled"
+            @click="sendMessage()"
           >
             Отправить
           </a>

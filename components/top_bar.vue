@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
-import { SUPPORT_EMAIL, SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import { sendLeadMessage, SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
 import { links } from "@/utils/constants";
 
 const route = useRoute();
@@ -30,6 +30,24 @@ const isSubmitDisabled = computed(() => {
   return !formName.value || !formEmail.value || !formMessage.value;
 });
 
+const sendMessage = async () => {
+  if (isSubmitDisabled.value) return;
+
+  const message =
+    `Имя: ${formName.value}\n` +
+    `Email: ${formEmail.value}\n` +
+    `Телефон: ${formMessage.value}\n`;
+
+  if (await sendLeadMessage(message)) {
+    alert(
+      "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
+    );
+    closeEmailModal();
+  } else {
+    alert("Ошибка. Не удалось отправить");
+  }
+};
+
 const openMobileMenu = () => {
   isMobileMenuOpen.value = true;
 };
@@ -55,18 +73,11 @@ const openEmailModal = () => {
 // Закрытие модального окна с формой
 const closeEmailModal = () => {
   isEmailModalOpen.value = false;
+  formName.value = "";
+  formEmail.value = "";
+  formMessage.value = "";
 };
 
-const emailData = () => {
-  // return `${SUPPORT_EMAIL_MAILTO}?subject=${encodeURIComponent('Заявка на заказ')}` +
-  //   `&body=${encodeURIComponent(formMessage)}\n\n${encodeURIComponent(formName)}\n` +
-  //   `${encodeURIComponent(formEmail)}`;
-  return (
-    `${SUPPORT_EMAIL_MAILTO}?subject=Заявка на заказ` +
-    `&body=${formMessage.value}\n\n${formName.value}\n` +
-    `${formEmail.value}`
-  );
-};
 function callEngineer() {
   window.location.href = "tel:+7(999) 822-11-45";
 }
@@ -204,9 +215,8 @@ function callManager() {
               <a
                 class="submit-button"
                 type="submit"
-                :href="emailData()"
                 :class="{ disabled: isSubmitDisabled }"
-                :disabled="isSubmitDisabled"
+                @click="sendMessage()"
               >
                 Отправить
               </a>
