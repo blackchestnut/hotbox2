@@ -25,7 +25,6 @@ export const sendLeadMessage = async (text) => {
     );
     return status.value === "success";
   } catch (e) {
-    console.log('test');
     console.error(e);
     return false;
   }
