@@ -1,12 +1,11 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
 import { ref, computed } from "vue";
-
-const formMessage = ref("");
 
 const clientName = ref("");
 const clientEmail = ref("");
 const clientPhone = ref("");
+const formMessage = ref("");
 
 const isSubmitDisabled = computed(() => {
   return !clientName.value || !clientEmail.value || !clientPhone.value;
@@ -16,13 +15,26 @@ const isLocalSubmitDisabled = computed(() => {
   return isSubmitDisabled.value || !formMessage.value.trim();
 });
 
-const emailData = () => {
-  return (
-    `${SUPPORT_EMAIL_MAILTO}?subject=Заявка на заказ` +
-    `&body=${formMessage.value}\n\nИмя: ${clientName.value}\n` +
-    `Email: ${clientEmail.value}\nТелефон: ${clientPhone.value}`
-  );
+const sendMessage = async () => {
+  if (isLocalSubmitDisabled.value) return;
+
+  const message = `**Заявка на заказ**\n` +
+    `Имя: ${clientName.value}\n` +
+    `Email: ${clientEmail.value}\n` +
+    `Телефон: ${clientPhone.value}\n` +
+    `Услуга: ${formMessage.value}`;
+
+  if (sendLeadMessage(message)) {
+    alert('Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время');
+    clientName.value = '';
+    clientEmail.value = '';
+    clientPhone.value = '';
+    formMessage.value = '';
+  } else {
+    alert('Ошибка. Не удалось отправить');
+  }
 };
+
 </script>
 <template>
   <div class="leadform-wrapper">
@@ -58,7 +70,7 @@ const emailData = () => {
             <a
               class="submit"
               :class="{ disabled: isLocalSubmitDisabled }"
-              :href="isLocalSubmitDisabled ? '#' : emailData()"
+              @click="sendMessage()"
             >
               Отправить
             </a>
