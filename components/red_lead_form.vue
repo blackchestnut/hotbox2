@@ -18,23 +18,25 @@ const isLocalSubmitDisabled = computed(() => {
 const sendMessage = async () => {
   if (isLocalSubmitDisabled.value) return;
 
-  const message = `**Заявка на заказ**\n` +
+  const message =
+    `**Заявка на заказ**\n` +
     `Имя: ${clientName.value}\n` +
     `Email: ${clientEmail.value}\n` +
     `Телефон: ${clientPhone.value}\n` +
     `Услуга: ${formMessage.value}`;
 
   if (sendLeadMessage(message)) {
-    alert('Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время');
-    clientName.value = '';
-    clientEmail.value = '';
-    clientPhone.value = '';
-    formMessage.value = '';
+    alert(
+      "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
+    );
+    clientName.value = "";
+    clientEmail.value = "";
+    clientPhone.value = "";
+    formMessage.value = "";
   } else {
-    alert('Ошибка. Не удалось отправить');
+    alert("Ошибка. Не удалось отправить");
   }
 };
-
 </script>
 <template>
   <div class="leadform-wrapper">

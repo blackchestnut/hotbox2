@@ -88,9 +88,9 @@ function callManager() {
           }}</a>
         </div>
       </div>
-      <router-link to="/">
+      <NuxtLink to="/">
         <div class="logo"></div>
-      </router-link>
+      </NuxtLink>
       <button class="btn call-button" @click="callEngineer">
         ЗВОНОК ИНЖЕНЕРУ
       </button>
@@ -103,7 +103,7 @@ function callManager() {
           <a class="close" @click="closeMobileMenu"></a>
         </div>
         <div class="modal-links">
-          <router-link
+          <NuxtLink
             v-for="(link, index) in links"
             :key="index"
             :class="['modal-link', { active: activeLink === index }]"
@@ -111,7 +111,7 @@ function callManager() {
             @click="closeMobileMenu"
           >
             {{ link.text }}
-          </router-link>
+          </NuxtLink>
         </div>
       </div>
     </div>

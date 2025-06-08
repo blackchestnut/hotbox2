@@ -1,7 +1,7 @@
 <template>
   <div class="topbar-wrapper">
     <div class="topbar">
-      <router-link
+      <NuxtLink
         v-for="(link, index) in links"
         :key="link.path"
         :to="link.path"
@@ -9,7 +9,7 @@
         :class="{ active: selectedButton === index }"
       >
         {{ link.text }}
-      </router-link>
+      </NuxtLink>
     </div>
   </div>
 </template>

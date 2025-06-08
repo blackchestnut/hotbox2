@@ -231,7 +231,7 @@ const emailData = () => {
         </div>
         <div class="politics">
           Нажимая на кнопку вы соглашаетесь с условиями
-          <router-link to="/privacy">политики конфиденциальности</router-link>
+          <NuxtLink to="/privacy">политики конфиденциальности</NuxtLink>
         </div>
       </div>
     </div>

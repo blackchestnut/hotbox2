@@ -5,11 +5,11 @@ import Menu from "@/components/menu.vue";
 <template>
   <Menu />
   <div class="page-container">
-    <RouterLink to="/products">
+    <NuxtLink to="/products">
       <div class="back">
         <div class="back-logo"></div>
       </div>
-    </RouterLink>
+    </NuxtLink>
     <div class="first-row">
       <h1 class="h1">Новости компании</h1>
       <p class="p1">Здесь мы публикуем свежие обновления внутри компании</p>
@@ -29,11 +29,11 @@ import Menu from "@/components/menu.vue";
         📞Звоните или пишите нам прямо сейчас, чтобы узнать больше!<br />
       </div>
 
-      <router-link to="/products">
+      <NuxtLink to="/products">
         <div class="more-container">
           <a class="more">Подробнее об установке</a>
         </div>
-      </router-link>
+      </NuxtLink>
 
       <div class="symbows-wrapper">
         <div class="symbows"></div>
@@ -70,11 +70,11 @@ import Menu from "@/components/menu.vue";
         будущее.<br />
       </div>
 
-      <router-link to="/products">
+      <NuxtLink to="/products">
         <div class="more-container">
           <a class="more">Подробнее об установке</a>
         </div>
-      </router-link>
+      </NuxtLink>
 
       <div class="symbows-wrapper">
         <div class="symbows"></div>
@@ -103,11 +103,11 @@ import Menu from "@/components/menu.vue";
       </div>
     </div>
 
-    <router-link to="/products">
+    <NuxtLink to="/products">
       <div class="more-container">
         <a class="more">Подробнее об установке</a>
       </div>
-    </router-link>
+    </NuxtLink>
 
     <div class="symbows-wrapper">
       <div class="symbows"></div>
