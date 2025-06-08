@@ -36,7 +36,7 @@ const sendMessage = async () => {
   const message =
     `Имя: ${formName.value}\n` +
     `Email: ${formEmail.value}\n` +
-    `Телефон: ${formMessage.value}\n`;
+    `Сообщение: ${formMessage.value}\n`;
 
   if (await sendLeadMessage(message)) {
     alert(
