@@ -25,7 +25,7 @@ const sendMessage = async () => {
     `Телефон: ${clientPhone.value}\n` +
     `Услуга: ${formMessage.value}`;
 
-  if (await sendLeadMessage(message)) {
+  if (sendLeadMessage(message)) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );
