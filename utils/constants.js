@@ -13,6 +13,7 @@ export const links = [
   { text: "О НАС", path: "/about/" },
 ];
 
+// https://core.telegram.org/api/entities
 export const sendLeadMessage = async (message) => {
   try {
     const res = await $fetch("/api/telegram.send", {

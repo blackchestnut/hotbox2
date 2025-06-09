@@ -2,8 +2,8 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const message = body.message;
 
-  const token = "7608908141:AAEIox2Fph3x81YMlNMoPggSuMDqvc2qcic"; // ⚠️ Никогда не публикуй этот токен!
-  const chatId = "-1002875747084"; // chat_id приватного канала
+  const token = process.env.HOTBOX_SITE_BOT_TOKEN;
+  const chatId = process.env.HOTBOX_SITE_BOT_CHAT_ID;
 
   const telegramUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
