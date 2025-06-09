@@ -6,13 +6,12 @@ on:
     branches:
       - master
 
-env:
-  HOTBOX_SITE_BOT_TOKEN: ${{ secrets.HOTBOX_SITE_BOT_TOKEN }}
-  HOTBOX_SITE_BOT_CHAT_ID: ${{ secrets.HOTBOX_SITE_BOT_CHAT_ID }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HOTBOX_SITE_BOT_TOKEN: ${{ secrets.HOTBOX_SITE_BOT_TOKEN }}
+      HOTBOX_SITE_BOT_CHAT_ID: ${{ secrets.HOTBOX_SITE_BOT_CHAT_ID }}
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
