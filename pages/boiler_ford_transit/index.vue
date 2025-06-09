@@ -23,10 +23,10 @@ const closeOrderModal = () => {
   clientName.value = "";
   clientEmail.value = "";
   clientPhone.value = "";
-  count.value = 1;
+  itemCount.value = 1;
 };
 
-const count = ref(1);
+const itemCount = ref(1);
 const clientName = ref("");
 const clientEmail = ref("");
 const clientPhone = ref("");
@@ -34,6 +34,10 @@ const clientPhone = ref("");
 const isSubmitDisabled = computed(() => {
   return !clientName.value || !clientEmail.value || !clientPhone.value;
 });
+
+const countChange = (value) => {
+  itemCount.value = value;
+};
 
 const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
@@ -43,10 +47,11 @@ const sendMessage = async () => {
     `Имя: ${clientName.value}\n` +
     `Email: ${clientEmail.value}\n` +
     `Телефон: ${clientPhone.value}\n` +
-    `Что заказано: ${selectedCar.value}` +
-    `Количество: ${count.value}`;
+    `Что заказано: ${selectedCar.value}\n` +
+    `Количество: ${itemCount.value}`;
 
-  if (await sendLeadMessage(message)) {
+  const result = await sendLeadMessage(message);
+  if (result) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );
@@ -156,6 +161,7 @@ const sendMessage = async () => {
           <OrderBoilerFordTransit
             :selectedCar="selectedCar"
             :selectedImage="selectedImage"
+            :countChange="countChange"
           />
         </div>
 

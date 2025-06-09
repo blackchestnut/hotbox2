@@ -3,9 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   modules: ["@nuxtjs/sitemap"],
-  css: [
-    "~/assets/css/main.css",
-  ],
+  css: ["~/assets/css/main.css"],
   app: {
     head: {
       script: [
@@ -15,14 +13,14 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: '/',
+    baseURL: "/",
   },
   ssr: true,
   experimental: {
     defaults: {
       // https://nuxt.com/docs/api/components/nuxt-link#in-nuxt-config
       nuxtLink: {
-        trailingSlash: 'append',
+        trailingSlash: "append",
       },
     },
   },

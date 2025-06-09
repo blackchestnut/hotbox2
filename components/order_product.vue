@@ -6,16 +6,19 @@ const props = defineProps([
   "selectedImage",
   "selectedFuel",
   "selectedGVS",
+  "countChange",
 ]);
 const count = ref(1);
 
 const increment = () => {
   count.value++;
+  props.countChange(count.value);
 };
 
 const decrement = () => {
   if (count.value > 1) {
     count.value--;
+    props.countChange(count.value);
   }
 };
 </script>

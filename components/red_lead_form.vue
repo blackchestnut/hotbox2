@@ -1,5 +1,5 @@
 <script setup>
-import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
+import { sendLeadMessage } from "@/utils/constants";
 import { ref, computed } from "vue";
 
 const clientName = ref("");
@@ -25,7 +25,8 @@ const sendMessage = async () => {
     `Телефон: ${clientPhone.value}\n` +
     `Услуга: ${formMessage.value}`;
 
-  if (await sendLeadMessage(message)) {
+  const result = await sendLeadMessage(message);
+  if (result) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );

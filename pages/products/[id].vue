@@ -16,7 +16,7 @@ const selectedImage = ref("");
 const boiler = boilers.find((v) => v.path === route.params.id);
 const images = boiler.images;
 
-const count = ref(1);
+const itemCount = ref(1);
 const clientName = ref("");
 const clientEmail = ref("");
 const clientPhone = ref("");
@@ -25,6 +25,9 @@ const isSubmitDisabled = computed(() => {
   return !clientName.value || !clientEmail.value || !clientPhone.value;
 });
 
+const countChange = (value) => {
+  itemCount.value = value;
+};
 const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
 
@@ -33,10 +36,13 @@ const sendMessage = async () => {
     `Имя: ${clientName.value}\n` +
     `Email: ${clientEmail.value}\n` +
     `Телефон: ${clientPhone.value}\n` +
-    `Что заказано: ${selectedBoiler.value}` +
-    `Количество: ${count.value}`;
+    `Что заказано: ${selectedBoiler.value}\n` +
+    `Количество: ${itemCount.value}\n` +
+    `Вид подключения: ${selectedGVS.value}\n` +
+    `Топливо: ${selectedFuel.value}`;
 
-  if (await sendLeadMessage(message)) {
+  const result = await sendLeadMessage(message);
+  if (result) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );
@@ -66,7 +72,7 @@ const closeOrderModal = () => {
   clientName.value = "";
   clientEmail.value = "";
   clientPhone.value = "";
-  count.value = 1;
+  itemCount.value = 1;
 };
 
 const toggleFuel = (fuel) => {
@@ -94,11 +100,11 @@ const toggleText = () => {
 <template>
   <Menu />
   <div class="page-container">
-    <RouterLink to="/products">
+    <NuxtLink to="/products">
       <div class="back">
         <div class="back-logo"></div>
       </div>
-    </RouterLink>
+    </NuxtLink>
     <div class="wrapper">
       <div
         class="boiler-card"
@@ -401,6 +407,7 @@ const toggleText = () => {
             :selectedImage="selectedImage"
             :selectedFuel="selectedFuel"
             :selectedGVS="selectedGVS"
+            :countChange="countChange"
           />
         </div>
         <div class="form-container">

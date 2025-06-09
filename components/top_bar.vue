@@ -34,11 +34,13 @@ const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
 
   const message =
+    `**Письмо**\n` +
     `Имя: ${formName.value}\n` +
     `Email: ${formEmail.value}\n` +
     `Сообщение: ${formMessage.value}\n`;
 
-  if (await sendLeadMessage(message)) {
+  const result = await sendLeadMessage(message);
+  if (result) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );

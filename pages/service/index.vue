@@ -47,10 +47,11 @@ const sendMessage = async () => {
     `Имя: ${clientName.value}\n` +
     `Email: ${clientEmail.value}\n` +
     `Телефон: ${clientPhone.value}\n` +
-    `Что заказано: ${selectedOrder.value}` +
+    `Что заказано: ${selectedOrder.value}\n` +
     `Количество: ${count.value}`;
 
-  if (await sendLeadMessage(message)) {
+  const result = await sendLeadMessage(message);
+  if (result) {
     alert(
       "Отправлено. Мы уже получили заявку и свяжемся с вами в ближайшее время"
     );

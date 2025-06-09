@@ -13,15 +13,14 @@ export const links = [
   { text: "О НАС", path: "/about/" },
 ];
 
-export const WEBHOOK_URL =
-  "https://discord.com/api/webhooks/1381270268122501292/vCHEBw6h0ux5ok2yce9iAzAtTnUbQOSi7-pyqSfkNZrBGGb84N2VNeikHK8Y6d-e_Kao";
-export const sendLeadMessage = async (text) => {
+export const sendLeadMessage = async (message) => {
   try {
-    const { status } = await useFetch(WEBHOOK_URL, {
-      method: "post",
-      body: { content: text },
+    const res = await $fetch("/api/telegram.send", {
+      method: "POST",
+      body: { message },
     });
-    return status.value === "success";
+
+    return res.ok;
   } catch (e) {
     console.error(e);
     return false;

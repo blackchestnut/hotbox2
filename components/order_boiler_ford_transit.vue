@@ -1,16 +1,18 @@
 <script setup>
 import { ref } from "vue";
 
-const props = defineProps(["selectedCar", "selectedImage"]);
+const props = defineProps(["selectedCar", "selectedImage", "countChange"]);
 const count = ref(1);
 
 const increment = () => {
   count.value++;
+  props.countChange(count.value);
 };
 
 const decrement = () => {
   if (count.value > 1) {
     count.value--;
+    props.countChange(count.value);
   }
 };
 </script>
@@ -29,6 +31,7 @@ const decrement = () => {
     <button class="circle" @click="increment">&#43;</button>
   </div>
 </template>
+
 <style scoped>
 .car-image {
   height: 180px;
