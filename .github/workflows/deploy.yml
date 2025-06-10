@@ -9,9 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HOTBOX_SITE_BOT_TOKEN: ${{ secrets.HOTBOX_SITE_BOT_TOKEN }}
-      HOTBOX_SITE_BOT_CHAT_ID: ${{ secrets.HOTBOX_SITE_BOT_CHAT_ID }}
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -21,6 +18,9 @@ jobs:
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxt build --preset github_pages
+        env:
+          HOTBOX_SITE_BOT_TOKEN: ${{ secrets.HOTBOX_SITE_BOT_TOKEN }}
+          HOTBOX_SITE_BOT_CHAT_ID: ${{ secrets.HOTBOX_SITE_BOT_CHAT_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
