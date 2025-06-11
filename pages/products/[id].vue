@@ -32,14 +32,14 @@ const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
 
   const message =
-    `**Заявка на заказ**\n` +
-    `Имя: ${clientName.value}\n` +
-    `Email: ${clientEmail.value}\n` +
-    `Телефон: ${clientPhone.value}\n` +
-    `Что заказано: ${selectedBoiler.value}\n` +
-    `Количество: ${itemCount.value}\n` +
-    `Вид подключения: ${selectedGVS.value}\n` +
-    `Топливо: ${selectedFuel.value}`;
+    `*Заявка на заказ*\n` +
+    `\`${selectedBoiler.value}\`\n` +
+    `Имя: \`${clientName.value}\`\n` +
+    `Email: \`${clientEmail.value}\`\n` +
+    `Телефон: \`${clientPhone.value}\`\n` +
+    `Топливо: \`${selectedFuel.value}\`\n` +
+    `Подключение: \`${selectedGVS.value}\`\n` +
+    `Количество: \`${itemCount.value} шт.\``;
 
   const result = await sendLeadMessage(message);
   if (result) {
@@ -434,7 +434,7 @@ const toggleText = () => {
           />
           <div class="submit-container">
             <a
-              class="submit-button"
+              class="btn btn-black"
               type="submit"
               :class="{ disabled: isSubmitDisabled }"
               :disabled="isSubmitDisabled"
@@ -444,8 +444,11 @@ const toggleText = () => {
             </a>
           </div>
           <div class="politics">
-            Нажимая на кнопку вы соглашаетесь с условиями
-            <NuxtLink to="/privacy">политики конфиденциальности</NuxtLink>
+            Нажимая «Отправить», вы подтверждаете согласие на обработку
+            и хранение ваших персональных данных в соответствии с 
+            <NuxtLink to='/privacy' class="privacy-link" @click='closeEmailModal()'>
+              политикой обработки персональных данных
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -645,6 +648,7 @@ const toggleText = () => {
 
 @media only screen and (max-width: 600px) {
   .information-container {
+    gap: 20px;
     flex-direction: column;
   }
 }
@@ -700,6 +704,7 @@ input::placeholder {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
 @media (max-width: 1024px) {
   .page-container {
     max-width: 100%;
@@ -792,6 +797,15 @@ input::placeholder {
     font-size: 16px;
     margin-top: 30px;
     margin-bottom: 20px;
+  }
+  .politics {
+    font-size: 10px;
+  }
+  .submit-container {
+    width: 100%;
+  }
+  .submit-container .btn {
+    width: 100%;
   }
 }
 </style>
