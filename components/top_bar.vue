@@ -34,10 +34,10 @@ const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
 
   const message =
-    `**Письмо**\n` +
-    `Имя: ${formName.value}\n` +
-    `Email: ${formEmail.value}\n` +
-    `Сообщение: ${formMessage.value}\n`;
+    `*Обычное сообщение*\n` +
+    `Имя: \`${formName.value}\`\n` +
+    `Email: \`${formEmail.value}\`\n` +
+    `Сообщение: _${formMessage.value}_\n`;
 
   const result = await sendLeadMessage(message);
   if (result) {
@@ -141,14 +141,15 @@ function callManager() {
         <div class="mobile-menu-buttons">
           <button class="mobile-menu-button">
             <span class="call-ingener"></span>
-            <span class="button-text" @click="callEngineer"
-              >Звонок инженеру</span
-            >
+            <span class="button-text" @click="callEngineer">
+              Звонок инженеру
+            </span>
           </button>
           <button class="mobile-menu-button">
             <span class="call-manager"></span>
-            <span class="button-text" @click="callManager"
-              >Звонок менеджеру</span
+            <span class="button-text" @click="callManager">
+              Звонок менеджеру
+            </span
             >
           </button>
           <button class="mobile-menu-button" @click="openEmailModal">
@@ -181,7 +182,7 @@ function callManager() {
         </div>
         <div class="email-modal-content">
           <h2>Написать на почту</h2>
-          <p>Наш менеджер свяжется с вами в течение дня</p>
+          <p class='subtitle'>Наш менеджер свяжется с вами в течение дня</p>
 
           <form @submit="sendEmail">
             <div class="form-group">
@@ -207,15 +208,13 @@ function callManager() {
                 v-model="formMessage"
                 placeholder="Сообщение"
                 name="message"
-                rows="10"
+                rows="4"
                 required
               ></textarea>
             </div>
             <div class="submit-container">
-              <!--button type="submit" class="submit-button">Отправить</button-->
-              <!--div>{{ emailData() }}</div-->
               <a
-                class="submit-button"
+                class="btn btn-black btn-small"
                 type="submit"
                 :class="{ disabled: isSubmitDisabled }"
                 @click="sendMessage()"
@@ -225,8 +224,11 @@ function callManager() {
             </div>
 
             <p class="privacy-policy">
-              Нажимая на кнопку, вы соглашаетесь с условиями
-              <a href="#" class="privacy-link">политики конфиденциальности</a>.
+              Нажимая «Отправить», вы подтверждаете согласие на обработку
+              и хранение ваших персональных данных в соответствии с 
+              <NuxtLink to='/privacy' class="privacy-link" @click='closeEmailModal()'>
+                политикой обработки персональных данных
+              </NuxtLink>
             </p>
           </form>
         </div>
@@ -324,15 +326,15 @@ function callManager() {
 }
 .modal-header {
   display: flex;
-  justify-content: flex-end; /* Крестик справа */
+  justify-content: flex-end;
   align-items: center;
   margin: 20px;
 }
 .email-modal {
   background-color: white;
-  width: 430px; /* Ширина модального окна */
-  max-height: 90vh; /* Ограничиваем высоту окна */
-  overflow-y: auto; /* Включаем вертикальную прокрутку */
+  width: 430px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
   border-radius: 0px 0px 8px 8px;
@@ -340,22 +342,33 @@ function callManager() {
 .email-modal-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   padding: 0px 20px 20px 20px;
   overflow-y: auto;
+  align-items: center;
 }
 
 .email-modal-content h2 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 0px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 16px;
   text-align: center;
 }
 
-.email-modal-content p {
-  font-size: 16px;
+.privacy-policy {
+  font-size: 12px;
   text-align: center;
-  padding-bottom: 10px;
+}
+
+.privacy-link {
+  color: #000;
+  text-decoration: underline;
 }
 
 .form-group {
@@ -388,18 +401,6 @@ function callManager() {
   resize: vertical;
   border: none;
 }
-
-.privacy-policy {
-  font-size: 12px;
-  color: #000;
-  text-align: center;
-}
-
-.privacy-link {
-  color: #000;
-  text-decoration: underline;
-}
-/*----------*/
 
 /* Мобильная версия */
 
@@ -591,26 +592,6 @@ function callManager() {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding-bottom: 20px;
   }
-  .email-modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0px 20px 20px 20px;
-    overflow-y: auto;
-  }
-
-  .email-modal-content h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-
-  .email-modal-content p {
-    font-size: 16px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
 
   .form-group {
     display: flex;
@@ -642,7 +623,6 @@ function callManager() {
     border: none;
   }
 
-  /* Контейнер для кнопки отправки */
   .submit-container {
     display: flex;
     justify-content: center; /* Центрирование по горизонтали */
@@ -651,15 +631,8 @@ function callManager() {
     margin-bottom: 10px;
   }
 
-  .privacy-policy {
-    font-size: 12px;
-    color: #000;
-    text-align: center;
-  }
-
-  .privacy-link {
-    color: #000;
-    text-decoration: underline;
+  .submit-container .btn {
+    width: 100%;
   }
 }
 </style>
