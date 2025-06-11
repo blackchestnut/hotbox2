@@ -17,7 +17,7 @@ export const links = [
 export const sendLeadMessage = async (message) => {
   try {
     if (process.env.NODE_ENV === 'production') {
-      const res = await $fetch('https://agileseason.com/cors_forms/hotbox', {
+      const res = await $fetch('https://api.agileseason.com/cors_forms/hotbox', {
         method: 'POST',
         body: { message: { text: message } },
       });
