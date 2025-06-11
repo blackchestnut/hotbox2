@@ -225,7 +225,7 @@ function callManager() {
 
             <p class="privacy-policy">
               Нажимая «Отправить», вы подтверждаете согласие на обработку
-              и хранение ваших персональных данных в соответствии с 
+              и хранение ваших персональных данных в соответствии с 
               <NuxtLink to='/privacy' class="privacy-link" @click='closeEmailModal()'>
                 политикой обработки персональных данных
               </NuxtLink>
@@ -624,10 +624,6 @@ function callManager() {
   }
 
   .submit-container {
-    display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    margin: 0 auto;
-    margin-top: 10px;
     margin-bottom: 10px;
   }
 
