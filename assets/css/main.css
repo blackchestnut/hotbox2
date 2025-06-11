@@ -17,6 +17,7 @@
   padding: 12px 18px;
   display: inline-block;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .btn:hover {
@@ -227,6 +228,19 @@ body {
   background-image: url("/images/black_logos/close_active.svg");
 }
 @media (max-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+
   article {
     margin-bottom: 40px;
   }
