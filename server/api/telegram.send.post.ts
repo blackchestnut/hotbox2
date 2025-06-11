@@ -8,13 +8,14 @@ export default defineEventHandler(async (event) => {
   const telegramUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
   const res = await fetch(telegramUrl, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       chat_id: chatId,
       text: message,
+      parse_mode: 'markdown',
     }),
   });
 

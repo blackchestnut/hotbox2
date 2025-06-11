@@ -19,11 +19,11 @@ const sendMessage = async () => {
   if (isLocalSubmitDisabled.value) return;
 
   const message =
-    `**Заявка на заказ**\n` +
-    `Имя: ${clientName.value}\n` +
-    `Email: ${clientEmail.value}\n` +
-    `Телефон: ${clientPhone.value}\n` +
-    `Услуга: ${formMessage.value}`;
+            `*Новая заявка*\n` +
+            `Имя: \`${clientName.value}\`\n` +
+            `Телефон: \`${clientPhone.value}\`\n` +
+            `Email: \`${clientEmail.value}\`\n` +
+            `Услуга: _${formMessage.value}_`;
 
   const result = await sendLeadMessage(message);
   if (result) {
