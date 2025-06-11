@@ -13,15 +13,23 @@ export const links = [
   { text: "О НАС", path: "/about/" },
 ];
 
-// https://core.telegram.org/api/entities
+// https://core.telegram.org/bots/api#formatting-options
 export const sendLeadMessage = async (message) => {
   try {
-    const res = await $fetch("/api/telegram.send", {
-      method: "POST",
-      body: { message },
-    });
+    if (process.env.NODE_ENV === 'production') {
+      const res = await $fetch('https://agileseason.com/cors_forms/hotbox', {
+        method: 'POST',
+        body: { message: { text: message } },
+      });
+      return res.ok;
 
-    return res.ok;
+    } else {
+      const res = await $fetch('/api/telegram.send', {
+        method: 'POST',
+        body: { message },
+      });
+      return res.ok;
+    }
   } catch (e) {
     console.error(e);
     return false;
