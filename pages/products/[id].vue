@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import Menu from "@/components/menu.vue";
+import PrivacyNote from '@/components/modals/privacy_note.vue';
 import { boilers } from "@/utils/data";
 import BoilerOrder from "@/components/order_product.vue";
 import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants.js";
@@ -443,13 +444,7 @@ const toggleText = () => {
               Отправить
             </a>
           </div>
-          <div class="politics">
-            Нажимая «Отправить», вы подтверждаете согласие на обработку
-            и хранение ваших персональных данных в соответствии с 
-            <NuxtLink to='/privacy' class="privacy-link" @click='closeEmailModal()'>
-              политикой обработки персональных данных
-            </NuxtLink>
-          </div>
+          <PrivacyNote />
         </div>
       </div>
     </div>
@@ -694,12 +689,6 @@ input:focus {
 input::placeholder {
   color: #8d8d8d;
 }
-.politics {
-  font-size: 14px;
-}
-.politics a {
-  color: #000;
-}
 .pacu {
   font-size: 20px;
   margin-bottom: 20px;
@@ -797,9 +786,6 @@ input::placeholder {
     font-size: 16px;
     margin-top: 30px;
     margin-bottom: 20px;
-  }
-  .politics {
-    font-size: 10px;
   }
   .submit-container {
     width: 100%;

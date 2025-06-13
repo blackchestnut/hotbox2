@@ -2,6 +2,7 @@
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import { sendLeadMessage, SUPPORT_EMAIL_MAILTO } from "@/utils/constants";
+import PrivacyNote from '@/components/modals/privacy_note.vue';
 import { links } from "@/utils/constants";
 
 const route = useRoute();
@@ -223,13 +224,7 @@ function callManager() {
               </a>
             </div>
 
-            <p class="privacy-policy">
-              Нажимая «Отправить», вы подтверждаете согласие на обработку
-              и хранение ваших персональных данных в соответствии с 
-              <NuxtLink to='/privacy' class="privacy-link" @click='closeEmailModal()'>
-                политикой обработки персональных данных
-              </NuxtLink>
-            </p>
+            <PrivacyNote />
           </form>
         </div>
       </div>
@@ -359,16 +354,6 @@ function callManager() {
 .subtitle {
   font-size: 16px;
   text-align: center;
-}
-
-.privacy-policy {
-  font-size: 12px;
-  text-align: center;
-}
-
-.privacy-link {
-  color: #000;
-  text-decoration: underline;
 }
 
 .form-group {

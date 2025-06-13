@@ -2,6 +2,7 @@
 import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
 import { ref, computed } from "vue";
 import Menu from "@/components/menu.vue";
+import PrivacyNote from '@/components/modals/privacy_note.vue';
 import { car } from "@/utils/data";
 import OrderBoilerFordTransit from "@/components/order_boiler_ford_transit.vue";
 
@@ -43,12 +44,12 @@ const sendMessage = async () => {
   if (isSubmitDisabled.value) return;
 
   const message =
-    `**Заявка на заказ**\n` +
-    `Имя: ${clientName.value}\n` +
-    `Email: ${clientEmail.value}\n` +
-    `Телефон: ${clientPhone.value}\n` +
-    `Что заказано: ${selectedCar.value}\n` +
-    `Количество: ${itemCount.value}`;
+    `*Заявка на заказ*\n` +
+    `\`${selectedCar.value}\`\n` +
+    `Имя: \`${clientName.value}\`\n` +
+    `Email: \`${clientEmail.value}\`\n` +
+    `Телефон: \`${clientPhone.value}\`\n` +
+    `Количество: \`${itemCount.value}\` шт.`;
 
   const result = await sendLeadMessage(message);
   if (result) {
@@ -198,10 +199,8 @@ const sendMessage = async () => {
               Отправить
             </a>
           </div>
-          <div class="politics">
-            Нажимая на кнопку вы соглашаетесь с условиями
-            <NuxtLink to="/privacy">политики конфиденциальности</NuxtLink>
-          </div>
+
+          <PrivacyNote />
         </div>
       </div>
     </div>
@@ -391,12 +390,6 @@ input:focus {
 }
 input::placeholder {
   color: #8d8d8d;
-}
-.politics {
-  font-size: 14px;
-}
-.politics a {
-  color: #000;
 }
 
 /*Мобильная версия*/
