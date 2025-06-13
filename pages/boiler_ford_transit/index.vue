@@ -49,7 +49,7 @@ const sendMessage = async () => {
     `Имя: \`${clientName.value}\`\n` +
     `Email: \`${clientEmail.value}\`\n` +
     `Телефон: \`${clientPhone.value}\`\n` +
-    `Количество: \`${itemCount.value}\` шт.`;
+    `Количество: \`${itemCount.value} шт.\``;
 
   const result = await sendLeadMessage(message);
   if (result) {
