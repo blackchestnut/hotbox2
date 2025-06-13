@@ -61,7 +61,8 @@
 }
 
 .factory-wrapper {
-  background-image: url("/images/big_images_of_boilers/shadow-box.png");
+  background-image: url("/images/big_images_of_boilers/shadow-box.webp");
+  background-position: center;
   background-size: cover;
   color: #fff;
   padding: 100px 0;
