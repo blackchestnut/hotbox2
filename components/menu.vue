@@ -35,7 +35,8 @@ export default {
           link.path === currentPath ||
           (link.extraMatchPath && currentPath.includes(link.extraMatchPath))
       );
-      this.selectedButton = buttonIndex !== -1 ? buttonIndex : 0;
+
+      this.selectedButton = buttonIndex !== -1 ? buttonIndex : null;
     },
   },
 };
