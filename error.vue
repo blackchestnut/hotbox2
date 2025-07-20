@@ -2,27 +2,16 @@
   <TopBarComponent />
   <Menu />
   <div class="page-container">
-    <h3>
-      <template v-if="error.statusCode === 404">
-        Упс, похоже страница испарилась
-      </template>
-      <template v-else-if="error.statusCode === 500">
-        Что-то сломалось на сервере
-      </template>
-      <template v-else> Произошла ошибка </template>
-    </h3>
+    <h3 v-if="error.statusCode === 404">Упс, похоже страница испарилась</h3>
+    <h3 v-else>Похоже, наш механизм дал сбой</h3>
 
     <div class="error-container">
       <div v-if="error.statusCode === 404" class="error_404"></div>
-      <div v-else-if="error.statusCode === 500" class="error_500"></div>
-      <div v-else class="error_default"></div>
+      <div v-else class="error_500"></div>
     </div>
 
     <p>
       <template v-if="error.statusCode === 404">Страница не найдена</template>
-      <template v-else-if="error.statusCode === 500">
-        Внутренняя ошибка сервера
-      </template>
       <template v-else>
         Ошибка {{ error.statusCode }}: {{ error.message }}
       </template>
