@@ -8,7 +8,7 @@ export const links = [
   { text: "ГЛАВНАЯ", path: "/" },
   { text: "КОТЕЛЬНЫЕ", path: "/products/", extraMatchPath: "kotelnye" },
   { text: "УСЛУГИ", path: "/service/" },
-  { text: "МОБИЛЬНЫЕ КОТЕЛЬНЫЕ", path: "/boiler_ford_transit/" },
+  { text: "МОБИЛЬНЫЕ КОТЕЛЬНЫЕ", path: "/arenda_fordtransit/" },
   { text: "НОВОСТИ", path: "/news/" },
   { text: "О НАС", path: "/about/" },
 ];
@@ -16,16 +16,18 @@ export const links = [
 // https://core.telegram.org/bots/api#formatting-options
 export const sendLeadMessage = async (message) => {
   try {
-    if (process.env.NODE_ENV === 'production') {
-      const res = await $fetch('https://api.agileseason.com/cors_forms/hotbox', {
-        method: 'POST',
-        body: { message: { text: message } },
-      });
+    if (process.env.NODE_ENV === "production") {
+      const res = await $fetch(
+        "https://api.agileseason.com/cors_forms/hotbox",
+        {
+          method: "POST",
+          body: { message: { text: message } },
+        }
+      );
       return res.ok;
-
     } else {
-      const res = await $fetch('/api/telegram.send', {
-        method: 'POST',
+      const res = await $fetch("/api/telegram.send", {
+        method: "POST",
         body: { message },
       });
       return res.ok;

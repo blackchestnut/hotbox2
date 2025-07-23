@@ -2,9 +2,9 @@
 import { SUPPORT_EMAIL_MAILTO, sendLeadMessage } from "@/utils/constants";
 import { ref, computed } from "vue";
 import Menu from "@/components/menu.vue";
-import PrivacyNote from '@/components/modals/privacy_note.vue';
+import PrivacyNote from "@/components/modals/privacy_note.vue";
 import { car } from "@/utils/data";
-import OrderBoilerFordTransit from "@/components/order_boiler_ford_transit.vue";
+import OrderBoilerFordTransit from "~/components/order_arenda_fordtransit.vue";
 
 const currentImageIndex = ref(0);
 const selectedCar = ref("");

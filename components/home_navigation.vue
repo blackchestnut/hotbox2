@@ -30,8 +30,8 @@
         </NuxtLink>
 
         <NuxtLink
-          to="/boiler_ford_transit"
-          class="transparent-button boiler_ford_transit"
+          to="/arenda_fordtransit"
+          class="transparent-button arenda_fordtransit"
         >
           Котельные мобильные<br />
           автоматизированные
@@ -116,7 +116,7 @@ h2 {
 .transparent-button.repaire {
   background-image: url("/images/white_logos/hammer-logo.svg");
 }
-.transparent-button.boiler_ford_transit {
+.transparent-button.arenda_fordtransit {
   background-image: url("/images/white_logos/car-logo.svg");
 }
 .transparent-button.production {
@@ -236,7 +236,7 @@ h2 {
   .button-container > .repaire {
     grid-area: c;
   } /* Ремонт и обслуживание */
-  .button-container > .boiler_ford_transit {
+  .button-container > .arenda_fordtransit {
     grid-area: d;
   } /* Мобильная котельная (смещена вправо) */
   .button-container > .production {

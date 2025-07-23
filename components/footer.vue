@@ -20,7 +20,7 @@ import {
               <NuxtLink to="/service/">Ремонт и обслуживание</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/boiler_ford_transit/">
+              <NuxtLink to="/arenda_fordtransit/">
                 Мобильная котельная на базе Ford Transit
               </NuxtLink>
             </li>
